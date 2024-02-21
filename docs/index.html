@@ -7,18 +7,37 @@
 .verb.learn { background-image: url("learn_light.png"); }
 .verb.code { background-image: url("code_light.png"); }
 .verb.connect { background-image: url("connect_light.png"); }
+.section#approaches li#identity::before {
+    /* TOTH https://stackoverflow.com/a/18367765 */
+    content: '\26B2';
+    transform: rotate(-45deg);
+}
+.section#approaches li#appconfig::before { content: '\2699'; }
+.section#approaches li#wrapping::before {
+    background-image: url(smartphone_dark.png);
+}
+.section#approaches li#airwatch-sdk::before {
+    background-image: url(sugar_dark.png);
+}
 @media (prefers-color-scheme: dark) {
     .verb.learn { background-image: url("learn_dark.png"); }
     .verb.code { background-image: url("code_dark.png"); }
     .verb.connect { background-image: url("connect_dark.png"); }
+    .section#approaches li#wrapping::before {
+        background-image: url(smartphone_light.png);
+    }
+    .section#approaches li#airwatch-sdk::before {
+        background-image: url(sugar_light.png);
+    }
 }
+
 </style>
 
 </head>
 <body
 ><h1>Workspace ONE Developer Centre</h1
 
-><div class="section"
+><div class="section" id="overview"
 ><p>Securely Integrate Your Mobile Apps with VMware Workspace ONE</p
 ><div class="verb learn"
     ><h1>Learn</h1
@@ -35,6 +54,104 @@
     ><p>Connect with VMware experts the Workspace ONE developer community.</p
     ></div
 
+></div><div class="section" id="capabilities"
+><h1>Core capabilities</h1
+><ul
+><li
+    ><a>App Passcode</a
+    ><p
+        >For security reasons, enterprises may want to prevent continuous
+        access to an app without periodic authentication.</p
+    ><p
+        >An app passcode can ensure the app is only accessible to the entitled
+        user and that the user identity is maintained over &#133;</p
+    ></li
+><li
+    ><a>App Tunneling</a
+    ><p
+        >An application may require access to web services residing behind a
+        corporate firewall.</p
+    ><p
+        >A traditional full device VPN solution is not adequate due to manual
+        steps required to enable the VPN on the device, and the security
+        exposure by &#133;</p
+    ></li
+><li
+    ><a>Prevent Copy and Paste</a
+    ><p
+        >For apps used in more regulated industries, it may be important for IT
+        to prevent applications from openly sharing data with each other.</p
+    ><p
+        >Copy / Paste restrictions can prevent data in a corporate app from
+        being easily transferred to &#133;</p
+    ></li
+><li
+    ><a>Single Sign On Certificate Authentication</a
+    ><p
+        >For security reasons, enterprises may require authentication for their
+        API endpoints and websites, SSO via Certificates allows a developer to
+        leverage enrollment credentials to handle the authentication without
+        prompting the end user of the &#133;</p
+    ></li
+></ul
 ></div
+
+></div><div class="section" id="approaches"
+><h1>Technical approaches</h1
+><p
+    >There are multiple technical approaches you can use to securely integrate
+    and authenticate apps with AirWatch and Identity Manager. Developers will
+    commonly mix and match the different approaches below to achieve the
+    desired functionality. The different approaches will have overlapping
+    feature sets, but the best practice depends on your application deployment
+    scenario and landscape.</p
+><p
+    ><a>See All Technical Approaches TBD</a></p
+><ul
+><li class="character-decorator" id="identity"
+    ><p>Identity Manager</p
+    ><p
+        >The Identity Manager component of Workspace ONE acts as a user store, a
+        user catalog and Single Sign On (SSO) hub for your organization.
+        Identity Manager's APIs shorten app development time by providing
+        consumable authentication and SSO &#133;</p
+    ><p><a>Learn More TBD</a></p
+    ></li
+><li class="image-decorator" id="wrapping"
+    ><p>App Wrapping</p
+    ><p
+        >App Wrapping identifies specific app functions and replaces them with
+        calls to the AirWatch SDK. This allows for a subset of AirWatch SDK
+        capabilities to be added to an app without requiring any developer
+        involvement. App Wrapping is only &#133;</p
+    ><p><a>Learn More TBD</a></p
+    ></li
+><li class="character-decorator" id="appconfig"
+    ><p>AppConfig.org</p
+    ><p
+        >The AppConfig Community is a collection of industry-leading EMM
+        solution providers and app developers that are making it simpler for
+        developers to use native platform APIs to configure and secure apps in
+        the enterprise.</p
+    ><p><a>Learn More TBD</a></p
+    ></li
+><li class="image-decorator" id="airwatch-sdk"
+    ><p>AirWatch SDK</p
+    ><p
+        >The SDK code library from AirWatch can be used to enable additional
+        app config and security capabilities that may not yet be available
+        natively as part of the AppConfig Community. Certain use cases such as
+        granular analytics can be provided &#133;</p
+    ><p><a>Learn More TBD</a></p
+    ></li
+></ul
+
+></div><div class="footer"
+><p>Copyright &copy; End User Computing Digital Workspace</p
+><p><a href="https://www.flaticon.com/free-icons/phone" title="phone icons"
+    >Phone icons created by Freepik - Flaticon</a
+> <a href="https://www.flaticon.com/free-icons/sugar" title="sugar icons"
+    >Sugar icons created by Freepik - Flaticon</a></p
+    ></div
 
 ></body>
