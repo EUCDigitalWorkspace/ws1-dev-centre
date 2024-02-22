@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
 
-<title>Application Configuration capabilities of Workspace ONE</title>
+<title>App Passcode capabilities of Workspace ONE</title>
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <link rel="stylesheet" href="../../../developer-centre.css" />
 <style>
@@ -25,21 +25,19 @@ table.supported table td.android {
     > / <a href="../">Core capabilities</a
     > /</p
 ></div
-><h1>Core Capability: App Configuration</h1
+><h1>Core Capability: App Passcode</h1
 ><div class="capability-page"
 
 ><div class="overview"
-><h2>App Configuration Overview</h2
+><h2>App Passcode Overview</h2
 ><p
-    >An app may require seed information for initial configuration or updated
-    configurations throughout the course of its lifecycle.</p
+    >For security reasons, enterprises may want to prevent continuous access to
+    an app without periodic authentication.</p
 ><p
-    >For example, the backend server URL of an application can be seeded to the
-    application during install so the app can auto-configure with minimal user
-    input. With the Workspace ONE platform, you can create seamless setup flows
-    by provisioning app config values such as server, port and domain, down to
-    your app. Improve user experience by eliminating first time setup steps and
-    dynamically change settings in your app with over the air updates.</p
+    >An app passcode can ensure the app is only accessible to the entitled user
+    and that the user identity is maintained over time. A biometric, such as
+    TouchID, can typically be implemented as a layer above the PIN code to
+    optimize the user experience.</p
 ><div class="supported"
     ><table class="supported"
         ><thead><tr
@@ -54,6 +52,13 @@ table.supported table td.android {
                     ></tr></table></td
             ></tr><tr
             ><td>AirWatch SDK</td
+            ><td
+                ><table><tr
+                    ><td class="apple">Apple</td
+                    ><td class="android">Android</td
+                    ></tr></table></td
+            ></tr><tr
+            ><td>App Wrapping</td
             ><td
                 ><table><tr
                     ><td class="apple">Apple</td
@@ -89,8 +94,8 @@ table.supported table td.android {
     ><p>App Tunneling</p
     ><p><a>Learn more TBD</a></p
 ></li><li
-    ><p>App Passcode</p
-    ><p><a href="../App-Passcode/">Learn more</a></p
+    ><p>App Configuration</p
+    ><p><a href="../App-Configuration/">Learn more</a></p
 ></li></ul
 ></div
 
