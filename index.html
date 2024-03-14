@@ -1,0 +1,2019 @@
+<!DOCTYPE html>
+<html class="vmware aui ltr" dir="ltr" lang="en-US">
+
+<head>
+    <title>Workspace ONE Dev Center - VMware {code}</title>
+    <meta content="initial-scale=1.0, width=device-width" name="viewport" />
+    <meta name="google-site-verification" content="4sw39tzmJEJbKLHofv5AZrf3qetHBTFB_-FGLJzzP18" />
+    <script
+        type="text/javascript">if (typeof console === "undefined" || typeof console.log === "undefined") { console = {}; console.log = function (a) { return } } (function () { var a = new RegExp("^\\d+\\.\\d+\\.\\d+\\.\\d+$"); var b = a.test(window.location.hostname) || window.location.hostname.toLowerCase().indexOf("localhost") >= 0 || window.location.search.toLowerCase().indexOf("debug") >= 0; if (b == false) { var d = function (f, e) { console.log(f + " \n" + e); window._gaq = window._gaq || []; window._gaq.push(["_trackEvent", "Exception", f, e, 1, true]) }; window.addEventListener("error", function (g) { g.preventDefault(); g.stopPropagation(); var e = g.target && (g.target.src || g.target.currentSrc); if (e && g.target.src.indexOf("keepalive") >= 0) { return } var h = e ? ("Missing reference for '" + (g.target.src || g.target.currentSrc) + "'") : g.message; var f = "Where -> " + window.location.href + (e ? "" : (" | File -> " + g.filename + " | Line -> " + g.lineno)); d(h, f) }, true); var c = function () { if (window.jQuery) { $(document).ajaxError(function (j, h, g) { var i = "AjaxError: " + g.url + " -> Result " + j.result; var f = "Where -> " + window.location.href; d(i, f) }) } else { setTimeout(c, 250) } }; c(); window.onerror = function () { return true } } })();</script>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+    <link href="/vmware-code-theme/images/favicon.ico" rel="Shortcut Icon" />
+    <link rel="icon" href="https://www.vmware.com/favicon.ico" type="image/x-icon" />
+    <link href="https://code.vmware.com/web/workspace-one" rel="canonical" />
+    <link href="https://code.vmware.com/zh/web/workspace-one" hreflang="zh-CN" rel="alternate" />
+    <link href="https://code.vmware.com/web/workspace-one" hreflang="x-default" rel="alternate" />
+    <link href="https://code.vmware.com/web/workspace-one" hreflang="en-US" rel="alternate" />
+    <link href="https://code.vmware.com/ja/web/workspace-one" hreflang="ja-JP" rel="alternate" />
+    <link rel="stylesheet" href="/everay-assets/vmware-code-theme/css/aui.css" />
+    <link rel="stylesheet" href="/everay-assets/vmware-code-theme/css/head.css" />
+    <link rel="stylesheet" href="/everay-assets/vmware-code-theme/css/main.css" />
+    <link rel="stylesheet" href="/everay-assets/vmware-code-theme/css/jquery.jstree.css" />
+    <link rel="stylesheet" href="/everay-assets/vmware-code-theme/css/dc/evidon.css" />
+    <link rel="stylesheet" href="/everay-assets/vmware-code-theme/css/dc/master.css" />
+    <link rel="stylesheet" href="/everay-assets/dp-portlet/css/artifactDetail.css" />
+    <link rel="stylesheet" href="/everay-assets/dp-portlet/css/searchResults.css" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/everay-assets/html/css/main.css" />
+    <link rel="stylesheet" href="/everay-assets/everay/css/everay-lib.css" />
+    <script>bazadebezolkohpepadr = "1802994684"</script>
+    <script type="text/javascript" src="/akam/13/6b778315" defer></script>
+</head>
+
+<body class=" yui3-skin-sam controls-visible signed-out public-page site"> <noscript>
+        <div class="unsupported-msg"> For full functionality of this site it is necessary to enable JavaScript. Here are
+            the <a href="http://www.enable-javascript.com/" target="_blank" rel="noopener" class=" external">
+                instructions how to enable JavaScript in your web browser</a>. </div>
+        <div class="unsupported-mask"></div>
+    </noscript>
+    <div class="ie-unsupported-msg" style="display:none;">
+        <div class="unsupported-msg"> For full functionality of this site it is necessary to update your Internet
+            Explorer (at least IE9). </div>
+        <div class="unsupported-mask"></div>
+    </div>
+    <div id="container">
+        <div class="navbar main-navbar" style="height: 60px;">
+            <div class="navbar-inner" style="background-color: #15193D!important;">
+                <div class="container">
+                    <div class="device-search"> <a href="javascript:void(0)" id="topnav-device-close-icon"><i
+                                class="fa fa-close" style="color: #fff;font-size:20px" aria-hidden="true"></i></a> <a
+                            href="javascript:void(0)" id="topnav-device-search-icon"><i class="fa fa-search"
+                                style="color: #fff;font-size:20px" aria-hidden="true"></i></a>
+                        <!-- <a href="javascript:void(0)" id="top-nav-device-main-icon"><i class="fa fa-bars"></i></a> -->
+                        <a href="javascript:void(0)" id="top-nav-device-main-icon" class="btn btn-navbar collapsed"
+                            data-toggle="collapse" data-target=".navbar-responsive-collapse"> <i class="fa fa-bars"
+                                style="color: #fff;font-size:20px"></i> </a>
+                    </div>
+                    <div> <a class="brand code_logo internal" href="/" rel="noopener" style="align-items: center;"
+                            target="_self">
+                            <div id="brand-logo-with-title-text"> <img
+                                    src="/vmware-code-theme/images/VMware-by-Broadcom-Logo_white.svg" alt="vmware logo"
+                                    style="height: 100%" />
+                                <div class="brand-text"> Developer </div>
+                            </div>
+                        </a> </div>
+                    <div class="nav-collapse navbar-responsive-collapse collapse" style="height: 0px;">
+                        <ul id="nav-header-link" class="nav">
+                            <li class="first" style="border-left: 1px solid rgba(255, 255, 255, 0.15)"> <a href="/home"
+                                    class=" internal" target="_self"> <span translate-text="dc.Home">Home</span> </a>
+                            </li>
+                            <li> <a href="/products" class=" internal" target="_self"> <span
+                                        translate-text="dc.Products">Products</span> </a> </li>
+                            <li> <a href="/apis" class=" internal" target="_self"> <span
+                                        translate-text="dc.APIs">APIs</span> </a> </li>
+                            <li> <a href="/powercli" class=" internal" target="_self"> <span
+                                        translate-text="dc.APIs">PowerCLI</span> </a> </li>
+                            <li> <a href="/samples" class=" internal" target="_self"> <span
+                                        translate-text="dc.Samples">Code Samples</span> </a> </li>
+                            <li> <a href="/sdks" class=" internal" target="_self"> <span
+                                        translate-text="dc.SDKs">SDKs</span> </a> </li>
+                            <li> <a href="/tools" class=" internal" target="_self"> <span
+                                        translate-text="dc.Tools">Tools</span> </a> </li>
+                            <li> <a href="/join" class=" internal" target="_self"> <span
+                                        translate-text="dc.JoinCode">Join {code}</span> </a> </li>
+                        </ul> <!-- <hr class="nav" style="border-top:1px solid #CCCCCC;"> -->
+                        <ul class="nav pull-right" id="nav-header-items-right">
+                            <li class="desktop-search"> <a href="javascript:void(0)" id="topnav-search-icon"
+                                    style="color: #FFFFFF;"><i class="fa fa-search" aria-hidden="true"></i></a>
+                                <form method="get" action="/web/dp/search" id="topnav-search-form"
+                                    style="display:none;margin-left:12px;margin-top:3px;" class=" internal"> <input
+                                        class="topnav-search-input" placeholder="Search VMware Developer"
+                                        translate-text-placeholder="dc.SearchVMwareCode" type="text" required="required"
+                                        value="" name="keywords" /> <button type="submit" tabindex="-1"
+                                        class="topnav-search-btn"><i class="fa fa-search"></i></button> </form>
+                            </li>
+                            <li id="localeSelector" class="locale"
+                                style="border-right: 1px solid rgba(255,255,255, 0.15);"> <a href="#"> <i
+                                        class="fa fa-globe"></i>English </a> </li>
+                            <script
+                                type="text/javascript">$(document).ready(function () { $("#localeSelector").on("click", function () { var a = '<ul id="availableLocales">    <li>        <a data-locale="zh" href="javascript:void(0);">            中文        </a>    </li>    <li>        <a data-locale="en" href="javascript:void(0);">            English        </a>    </li>    <li>        <a data-locale="ja" href="javascript:void(0);">            日本語        </a>    </li></ul>'; alertEx({ header: "Choose a Language", message: a, ok: "Cancel" }); $("#availableLocales a").off("click").on("click", function () { var c = window.location.pathname; var b = (c[0] === "/" && (c[3] === "/" || c.length === 3)) ? c.substring(3) : c; window.location = "/" + $(this).data("locale") + b + window.location.search + window.location.hash }); return false }) });</script>
+                            <!-- <li class="divider-vertical" style="height: 15px;margin:10px 10px 0 0px"></li> -->
+                            <li class="login-tooltip"> <a
+                                    href="https://devportal-csp-authenticator.esp.vmware.com/api/auth/discovery?targetUri=https://developer.vmware.com/web/dp/horizon-login"
+                                    id="login-trigger" style="background: none;padding-left: 10px;font-weight: normal;"
+                                    target="_self" class=" internal"> Login </a> <span class="login-tooltiptext">Login
+                                    with your VMware account (Customer Connect credentials).</span> </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="device-search">
+                <div class="device-topnav-search">
+                    <form method="get" action="/web/dp/search" style="width: 100%;" class=" internal"> <input
+                            class="topnav-search-input device" placeholder="Search" required="required" value=""
+                            name="keywords" type="text" /> <button type="submit" tabindex="-1"
+                            class="device-topnav-search-btn"><i class="fa fa-search"></i></button> </form>
+                </div>
+            </div>
+        </div>
+        <div style="clear:both"></div>
+        <script
+            type="text/javascript">$(document).ready(function () { var b = function () { var e = "a[href='" + window.location.pathname.replace("/web", "").replace("/dp", "") + "']"; var d = document.querySelector("#nav-header-link"); var c = d.querySelector(e); if (c) { c.classList.add("active-tab") } }; var a = function () { const c = "#container > div.navbar.main-navbar > div.navbar-inner.user-nav > div > div.nav-collapse.navbar-responsive-collapse.collapse"; element = document.querySelector(c); if (element) { element.classList.toggle("shadow") } }; b(); $("#sign-out").click(function (f) { f.preventDefault(); const c = "https://devportal-csp-authenticator.esp.vmware.com/api/auth/logout"; const g = sessionStorage.getItem("idToken"); const d = sessionStorage.getItem("refreshToken"); const e = c.concat("/", d, "/", g, "?allowCspLogoutPage=true"); document.cookie = "REDIRECT=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;"; sessionStorage.clear(); window.open("/c/portal/logout", "_blank"); window.open(e, "_self") }); $(document).on("click", "#topnav-search-icon", function () { $("#topnav-search-icon").hide(); $("#topnav-search-form").show(); $(".topnav-search-input").focus() }); $(document).click(function () { $("#topnav-search-icon").show(); $("#topnav-search-form").hide() }); $(document).on("click", ".topnav-search-input, .topnav-search-btn, #topnav-search-icon", function (c) { c.stopPropagation() }); $("#container .main-navbar .navbar-inner").addClass("user-nav"); $("#container .nav_site").addClass("user-nav"); if ($("body").find(".portlet-dockbar").length > 0) { $(".vmware #container .navbar.main-navbar").addClass("nav-admin"); $(".vmware .nav_site.user-nav").addClass("nav-admin"); $(".vmware #container > #content").addClass("nav-admin") } $(document).on("click", "#topnav-device-search-icon", function () { $(".device-topnav-search").slideDown(); $("#topnav-device-close-icon").show(); $("#topnav-device-search-icon").hide(); $(".topnav-search-input.device").focus() }); $(document).on("click", "#topnav-device-close-icon", function () { $(".device-topnav-search").slideUp(); $("#topnav-device-close-icon").hide(); $("#topnav-device-search-icon").show() }); $(document).on("click", "#top-nav-device-main-icon", function () { $(".device-topnav-search").slideUp(); $("#topnav-device-close-icon").hide(); $("#topnav-device-search-icon").show(); a() }) });</script>
+        <div id="content" class="clearfix"> <!-- Styles for SDK/Cert Detail Page -->
+            <style type="text/css">
+                .description {
+                    padding: 5px 15px 0
+                }
+
+                .description .portlet-title-text,
+                .related-resources .portlet-title-text {
+                    display: none
+                }
+
+                .description .portlet-topper,
+                .description .portlet {
+                    border: 0
+                }
+
+                .forums .portlet-borderless-container {
+                    min-height: 0
+                }
+
+                .related-resources h2 {
+                    font-size: 20px;
+                    margin: 0 0 0 12px
+                }
+
+                .related-resources ul {
+                    list-style: none outside none;
+                    margin: 0
+                }
+
+                .related-resources ul li {
+                    border-top: 1px solid #e6e6e6;
+                    line-height: 20px;
+                    padding-bottom: 7px;
+                    padding-top: 5px;
+                    vertical-align: top
+                }
+
+                .related-resources ul li:first-child {
+                    border-top: medium none !important
+                }
+            </style>
+            <div class="community-details-page" id="main-content" role="main">
+                <style>
+                    @media (max-width : 979px) {
+                        .vmware .bread-crumb .social-links {
+                            padding: 0;
+                            padding-top: 15px;
+                        }
+                    }
+
+                    @media (min-width : 980px) {
+                        .vmware .bread-crumb .social-links {
+                            padding: 0;
+                            padding-top: 18px;
+                        }
+                    }
+
+                    @media (max-width : 767px) {
+                        .vmware .social-links {
+                            display: none !important;
+                        }
+
+                        .vmware .bread-crumb .breadcrumb-search-input {
+                            width: auto !important;
+                        }
+
+                        .vmware .bread-crumb .breadcrumb {
+                            padding-bottom: 0px !important;
+                            margin-bottom: 0px !important;
+                        }
+
+                        .vmware .internal-global-search {
+                            margin: 0px;
+                        }
+                    }
+
+                    .vmware .bread-crumb {
+                        background: #fff none repeat scroll 0 0;
+                        height: 54px;
+                        padding: 0;
+                        width: 100%;
+                    }
+
+                    .vmware .bread-crumb .breadcrumb {
+                        background: transparent;
+                        padding: 20px 0 10px 0px;
+                    }
+
+                    .vmware .bread-crumb .breadcrumb a.breadcrumb-item {
+                        color: #646565;
+                        font-size: 16px;
+                    }
+
+                    .vmware .bread-crumb .breadcrumb a.active {
+                        color: #0D9AE5 !important;
+                    }
+
+                    .vmware .bread-crumb .breadcrumb-search-input {
+                        border: 0px solid #646565;
+                        line-height: 48px;
+                        height: 48px;
+                        color: #64657A;
+                        font-size: 18px;
+                        padding: 0px 10px;
+                        margin-bottom: 0px;
+                        width: 80%;
+                    }
+
+                    .vmware .bread-crumb .breadcrumb-search-input:focus {
+                        color: #64657A;
+                        box-shadow: none !important;
+                    }
+
+                    .vmware .internal-global-search.internal {
+                        padding-top: 5px;
+                    }
+
+                    .vmware .bread-crumb .bdivider {
+                        color: #646565;
+                        padding: 0 2px;
+                    }
+
+                    .vmware .bread-crumb .breadcrumb_search form {
+                        margin: 0px;
+                    }
+
+                    .vmware .bread-crumb .social-links .overlay-con {
+                        margin-left: 0px;
+                    }
+
+                    .vmware .bread-crumb [class*="span"] {
+                        margin-left: 0px;
+                    }
+
+                    .vmware .overridecollapse {
+                        display: none !important;
+                    }
+
+                    .vmware #main-content.top-level-page .bread-crumb {
+                        display: block;
+                    }
+
+                    .vmware .bread-crumb .social-links a {
+                        color: #CCCCCC;
+                    }
+
+                    .vmware .breadcrumb-search-icon {
+                        color: #CCCCCC;
+                        font-size: 20px;
+                        font-weight: normal;
+                        position: relative;
+                        top: 4px;
+                    }
+
+                    .vmware .icon-search.breadcrumb-search-icon {
+                        color: #cccccc;
+                        font-size: 18px;
+                    }
+
+                    .vmware .bread-crumb-layout {
+                        border-bottom: 1px solid #cbcbcb;
+                    }
+
+                    .vmware .bread-crumb .social-links {
+                        margin: 0 !important;
+                    }
+
+                    .vmware #global-alert-msg.artifact-style {
+                        text-align: left;
+                        background-color: rgb(254, 236, 181);
+                        border: 1px solid rgb(239, 214, 3);
+                        color: rgb(107, 105, 98);
+                        font-family: "proxima nova_light", Proxima Nova, verdana, sans serif;
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 16px;
+                        margin-top: 0px;
+                    }
+
+                    .vmware #global-alert-msg.artifact-style a {
+                        color: rgb(13, 154, 229);
+                        font-family: "proxima nova_light", Proxima Nova, verdana, sans serif;
+                        font-size: 16px;
+                        font-weight: 400;
+                        margin: 0;
+                    }
+
+                    .vmware #global-alert-msg.artifact-style .cancel {
+                        display: none;
+                    }
+
+                    @media (max-width : 1140px) {
+                        .vmware #global-alert-msg.artifact-style {
+                            font-size: 14px !important;
+                        }
+                    }
+                </style>
+                <div class="bread-crumb-layout">
+                    <div class="bread-crumb">
+                        <div class="span9">
+                            <nav class="breadcrumb"> <!-- <a class="breadcrumb-item" href="/home">VMware {code}</a> -->
+                                <span class="bdivider">&nbsp;/&nbsp;</span> <a class="breadcrumb-item active internal"
+                                    href="/products" target="_self"> Dev Centers </a>
+                                <span class="bdivider">&nbsp;/&nbsp;</span> <a class="breadcrumb-item active internal"
+                                    href="." target="_self"> Workspace One </a>
+                            </nav>
+                        </div>
+                        <div class="span2" style="float:right; display: none;">
+                            <div class="social-links">
+                                <div class="overlay-con"> <a href="https://www.twitter.com/home?status=/join"
+                                        target="_blank" class=" external" rel="noopener"><i
+                                            class="fa fa-twitter"></i></a>
+                                    <div class="social-overlay"> <i class="fa fa-twitter"></i> <a
+                                            href="https://www.twitter.com/home?status=/join" target="_blank"
+                                            class=" external" rel="noopener">Share</a> </div>
+                                </div>
+                                <div class="overlay-con"> <a href="https://www.facebook.com/sharer/sharer.php?u=/join"
+                                        target="_blank" class=" external" rel="noopener"><i
+                                            class="fa fa-facebook"></i></a>
+                                    <div class="social-overlay"> <i class="fa fa-facebook"></i> <a
+                                            href="https://www.facebook.com/sharer/sharer.php?u=/join" target="_blank"
+                                            class=" external" rel="noopener">Share</a> </div>
+                                </div>
+                                <div class="overlay-con"> <a target="_blank"
+                                        href="https://www.linkedin.com/shareArticle?mini=true&amp;url=/join&amp;title=Join VMware {code}&amp;summary=&amp;source=developer.vmware.com"
+                                        class=" external" rel="noopener"><i class="fa fa-linkedin"></i></a>
+                                    <div class="social-overlay"> <i class="fa fa-linkedin"></i> <a target="_blank"
+                                            href="https://www.linkedin.com/shareArticle?mini=true&amp;url=/join&amp;title=Join VMware {code}&amp;summary=&amp;source=developer.vmware.com"
+                                            class=" external" rel="noopener">Share</a> </div>
+                                </div>
+                                <div class="overlay-con"> <a target="_blank"
+                                        href="https://plus.google.com/share?url=/join" class=" external"
+                                        rel="noopener"><i class="fa fa-google-plus"></i></a>
+                                    <div class="social-overlay"> <i class="fa fa-google-plus"></i> <a target="_blank"
+                                            href="https://plus.google.com/share?url=/join" class=" external"
+                                            rel="noopener">Share</a> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="clear:both"></div> <!-- section 100 -->
+                <div class="row-fluid">
+                    <div class="portlet-column portlet-column-only span12" id="column-1">
+                        <div class="portlet-dropzone portlet-column-content portlet-column-content-first"
+                            id="layout-column_column-1">
+                            <div class="portlet-boundary portlet-boundary_pagetitle_WAR_dpportlet_ portlet-static portlet-static-end page-title-portlet "
+                                id="p_p_id_pagetitle_WAR_dpportlet_"> <span id="p_pagetitle_WAR_dpportlet"></span>
+                                <div class="portlet-borderless-container" style="">
+                                    <div class="portlet-body"> <!-- If available, show the error message -->
+                                        <style>
+                                            .page-title-portlet .portlet-body h1 {
+                                                color: #565656 !important;
+                                                font-size: 35px;
+                                                font-weight: 300;
+                                                text-align: left;
+                                                margin-top: 35px;
+                                            }
+                                        </style>
+                                        <h1 translate-text-dynamic="">Workspace ONE Dev Center</h1>
+                                        <div class="secondary-nav sticky-nav-container">
+                                            <div class="sticky-nav-padding">
+                                                <ul>
+                                                    <li> <a data-element-type="tab" href="#overview"
+                                                            translate-text-dynamic="">Overview</a> </li>
+                                                    <li> <a data-element-type="tab" href="#core-capabilities"
+                                                            translate-text-dynamic="">Core Capabilities</a> </li>
+                                                    <li> <a data-element-type="tab" href="#technical-approaches"
+                                                            translate-text-dynamic="">Technical Approaches</a> </li>
+                                                    <li> <a data-element-type="tab" href="#resources"
+                                                            translate-text-dynamic="">Resources</a> </li>
+                                                    <li> <a data-element-type="tab" href="#community"
+                                                            translate-text-dynamic="">Community</a> </li>
+                                                </ul>
+                                                <div style="clear: both; line-height: 0;"> &nbsp; </div>
+                                            </div>
+                                        </div>
+                                        <div style="clear: both; min-height: 1px;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portlet-boundary portlet-boundary_56_ portlet-static portlet-static-end portlet-borderless portlet-journal-content "
+                                id="p_p_id_56_INSTANCE_3DE1CMTGUWxq_"> <span id="p_56_INSTANCE_3DE1CMTGUWxq"></span>
+                                <div class="portlet-borderless-container" style="">
+                                    <div class="portlet-body">
+                                        <div class="journal-content-article">
+                                            <div> <static-content language-id="en_US">
+                                                    <style type="text/css">
+                                                        .developer-resources,
+                                                        .overview,
+                                                        .capabilities {
+                                                            background-color: #fff;
+                                                            margin: 50px 0 30px 0
+                                                        }
+
+                                                        .ws1-home h1,
+                                                        .ws1-home h2 {
+                                                            font-family: 'proxima-nova', sans-serif !important;
+                                                            color: #565656;
+                                                            font-weight: 300
+                                                        }
+
+                                                        .ws1-home h1 {
+                                                            font-size: 25px;
+                                                            line-height: 31px;
+                                                            text-align: left
+                                                        }
+
+                                                        .ws1-home h2 {
+                                                            font-size: 30px;
+                                                            text-transform: uppercase;
+                                                            margin: 25px 0 25px 0 !important
+                                                        }
+
+                                                        @media(min-width:980px) and (max-width:1215px) {
+                                                            .overview p {
+                                                                height: 60px
+                                                            }
+                                                        }
+
+                                                        @media(min-width:1215px) {
+                                                            .overview p {
+                                                                height: 40px
+                                                            }
+                                                        }
+
+                                                        .overview .col-md-4 {
+                                                            text-align: center
+                                                        }
+
+                                                        .overview img {
+                                                            margin: 0 auto
+                                                        }
+
+                                                        .overview .row {
+                                                            margin: 30px 0 30px 0
+                                                        }
+
+                                                        .horizontal-separation {
+                                                            background: -webkit-linear-gradient(0deg, #a9da1f 0, #39906a 100%);
+                                                            background: -moz-linear-gradient(0deg, #a9da1f 0, #39906a 100%);
+                                                            background: -o-linear-gradient(0deg, #a9da1f 0, #39906a 100%);
+                                                            background: -ms-linear-gradient(0deg, #a9da1f 0, #39906a 100%);
+                                                            background: linear-gradient(90deg, #a9da1f 0, #39906a 100%);
+                                                            height: 5px
+                                                        }
+                                                    </style>
+                                                    <div class="ws1-home" id="overview">
+                                                        <div class="overview container-fluid">
+                                                            <h1>Securely Integrate Your Mobile Apps with VMware
+                                                                Workspace ONE</h1>
+                                                            <div class="row">
+                                                                <div class="col-md-4"> <img alt="Responsive image"
+                                                                        class="img-responsive"
+                                                                        src="assets/home/WS1_home_learn.png/a1ef6cdc-0b05-4017-b980-2b3c94f41e5d" />
+                                                                    <h2>Learn</h2>
+                                                                    <p>Learn what you can do with the core capabiltites
+                                                                        provided by the Workspace ONE platform.</p> <a
+                                                                        href="/core-capabilities" target="_self"
+                                                                        class=" internal"><strong>Learn
+                                                                            About Core Capabilities <span
+                                                                                aria-hidden="true"
+                                                                                class="fa fa-angle-double-right">
+                                                                            </span></strong></a>
+                                                                </div>
+                                                                <div class="col-md-4"> <img alt="Responsive image"
+                                                                        class="img-responsive"
+                                                                        src="assets/home/WS1_home_code.png/ea0abf53-aea2-49e4-96a1-908784f116d8" />
+                                                                    <h2>Code</h2>
+                                                                    <p>Get APIs, SDKs, docs, code samples, and other
+                                                                        developer resources for Workspace ONE.</p>
+                                                                    <p><a href="#resources"
+                                                                            target="_self"><strong>Browse Developer
+                                                                                Resources&nbsp;<span aria-hidden="true"
+                                                                                    class="fa fa-angle-double-right">
+                                                                                </span></strong></a></p>
+                                                                </div>
+                                                                <div class="col-md-4"> <img alt="Responsive image"
+                                                                        class="img-responsive"
+                                                                        src="assets/home/WS1_home_connect.png/ac237ec6-153e-4ead-aecc-b4fa9129c109" />
+                                                                    <h2>CONNECT</h2>
+                                                                    <p>Connect with VMware experts the Workspace ONE
+                                                                        developer community.</p> <a href="#community"
+                                                                        target="_self"> <strong>View Community Resources
+                                                                        </strong> </a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="horizontal-separation"> &nbsp; </div>
+                                                        </div>
+                                                    </div>
+                                                </static-content> </div>
+                                            <style type="text/css">
+                                                .developer-resources,
+                                                .overview,
+                                                .capabilities {
+                                                    background-color: #fff
+                                                }
+
+                                                .ws1-home h1,
+                                                .ws1-home h2 {
+                                                    font-family: ProximaNova;
+                                                    color: #565656;
+                                                    font-weight: 300
+                                                }
+
+                                                .ws1-home h1 {
+                                                    font-size: 25px;
+                                                    line-height: 31px;
+                                                    text-align: left
+                                                }
+
+                                                .ws1-home h2 {
+                                                    font-size: 30px;
+                                                    text-transform: uppercase;
+                                                    margin: 25px 0 25px 0 !important
+                                                }
+
+                                                .overview p {
+                                                    padding: 0 60px 0 60px
+                                                }
+
+                                                .overview .col-md-4 {
+                                                    text-align: center
+                                                }
+
+                                                .overview img {
+                                                    margin: 0 auto
+                                                }
+
+                                                .overview .row {
+                                                    margin: 30px 0 30px 0
+                                                }
+
+                                                .horizontal-separation {
+                                                    background: -webkit-linear-gradient(0deg, #a9da1f 0, #39906a 100%);
+                                                    background: -moz-linear-gradient(0deg, #a9da1f 0, #39906a 100%);
+                                                    background: -o-linear-gradient(0deg, #a9da1f 0, #39906a 100%);
+                                                    background: -ms-linear-gradient(0deg, #a9da1f 0, #39906a 100%);
+                                                    background: linear-gradient(90deg, #a9da1f 0, #39906a 100%);
+                                                    height: 5px
+                                                }
+                                            </style>
+                                        </div>
+                                        <div class="entry-links"> </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portlet-boundary portlet-boundary_101_ portlet-static portlet-static-end portlet-borderless portlet-asset-publisher "
+                                id="p_p_id_101_INSTANCE_927T5zYKvI3P_"> <span id="p_101_INSTANCE_927T5zYKvI3P"></span>
+                                <div class="portlet-borderless-container" style="">
+                                    <div class="portlet-body">
+                                        <div class="lfr-meta-actions add-asset-selector"> </div>
+                                        <div class="subscribe-action"> </div>
+                                        <style>
+                                            .capabilities {
+                                                background-color: #FFFFFF;
+                                                margin: 50px 0 30px 0;
+                                            }
+
+                                            .capabilities .row {
+                                                margin-left: -15px;
+                                                margin-right: -15px;
+                                            }
+
+                                            .capabilities .capability-icon {
+                                                float: left;
+                                            }
+
+                                            .capabilities .capability-icon i {
+                                                background-color: #0095D3;
+                                            }
+
+                                            .capabilities .capability-summary {
+                                                margin-left: 50px;
+                                            }
+
+                                            .capabilities h2,
+                                            .capabilities h3 {
+                                                font-weight: 300;
+                                            }
+
+                                            .capabilities h2 {
+                                                font-size: 30px;
+                                                text-transform: uppercase;
+                                                color: #565656;
+                                                margin: 25px 0px 25px 0px !important;
+                                            }
+
+                                            .capabilities h3 {
+                                                color: #006990;
+                                                font-size: 18px;
+                                                text-align: left;
+                                                margin-top: 0px;
+                                            }
+
+                                            .capabilities .row .browse-all-link {
+                                                margin-top: 30px;
+                                            }
+
+                                            .capabilities .row .browse-all-link a {
+                                                float: right;
+                                            }
+
+                                            .capabilities .core-capabilities-title {
+                                                margin-bottom: 10px;
+                                            }
+                                        </style>
+                                        <div id="core-capabilities" class="tabbed-section capabilities container-fluid">
+                                            <div class="row core-capabilities-title">
+                                                <div class="col-sm-6">
+                                                    <h2>Core Capabilities</h2>
+                                                </div>
+                                                <div class="col-sm-6 browse-all-link"> <a href="core-capabilities"
+                                                        translate-text="dc.ws1.browseAllCapabilities" class=" internal"
+                                                        target="_self"><strong>browse all capabilites <span
+                                                                class="fa fa-angle-double-right"
+                                                                aria-hidden="true"></span></strong></a> </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="capability-icon"> <span class="fa-stack fa-lg"> <i
+                                                                class="fa fa-square fa-stack-2x"></i> <i
+                                                                class="fa fa-check fa-stack-1x fa-inverse"></i> </span>
+                                                    </div>
+                                                    <div class="capability-summary">
+                                                        <h3><a href="core-capabilities/App-Passcode" target="_self"
+                                                                class=" internal">App Passcode <span
+                                                                    class="fa fa-angle-double-right"
+                                                                    aria-hidden="true"></span></a></h3>
+                                                        <div class="inherit-font">
+                                                            <p></p>
+                                                            <p>For security reasons, enterprises may want to prevent
+                                                                continuous access to an app without periodic
+                                                                authentication.</p>
+                                                            <p>An app passcode can ensure the app is only accessible to
+                                                                the entitled user and that the user identity is
+                                                                maintained over...</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="capability-icon"> <span class="fa-stack fa-lg"> <i
+                                                                class="fa fa-square fa-stack-2x"></i> <i
+                                                                class="fa fa-check fa-stack-1x fa-inverse"></i> </span>
+                                                    </div>
+                                                    <div class="capability-summary">
+                                                        <h3><a href="core-capabilities/Single-Sign-On-Certificate-Authentication"
+                                                                target="_self" class=" internal">Single Sign On
+                                                                Certificate Authentication <span
+                                                                    class="fa fa-angle-double-right"
+                                                                    aria-hidden="true"></span></a></h3>
+                                                        <div class="inherit-font">
+                                                            <p></p>
+                                                            <p>For security reasons, enterprises may require
+                                                                authentication for their API endpoints and websites, SSO
+                                                                via Certificates allows a developer to leverage
+                                                                enrollment credentials to handle the authentication
+                                                                without prompting the end user of the...</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12"></div>
+                                                <div class="col-md-6">
+                                                    <div class="capability-icon"> <span class="fa-stack fa-lg"> <i
+                                                                class="fa fa-square fa-stack-2x"></i> <i
+                                                                class="fa fa-check fa-stack-1x fa-inverse"></i> </span>
+                                                    </div>
+                                                    <div class="capability-summary">
+                                                        <h3><a href="core-capabilities/Prevent-Copy-and-Paste"
+                                                                target="_self" class=" internal">Prevent Copy and Paste
+                                                                <span class="fa fa-angle-double-right"
+                                                                    aria-hidden="true"></span></a></h3>
+                                                        <div class="inherit-font">
+                                                            <p></p>
+                                                            <p>For apps used in more regulated industries, it may be
+                                                                important for IT to prevent applications from openly
+                                                                sharing data with each other.</p>
+                                                            <p>Copy / Paste restrictions can prevent data in a corporate
+                                                                app from being easily transferred to...</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="capability-icon"> <span class="fa-stack fa-lg"> <i
+                                                                class="fa fa-square fa-stack-2x"></i> <i
+                                                                class="fa fa-check fa-stack-1x fa-inverse"></i> </span>
+                                                    </div>
+                                                    <div class="capability-summary">
+                                                        <h3><a href="core-capabilities/App-Tunneling" target="_self"
+                                                                class=" internal">App Tunneling <span
+                                                                    class="fa fa-angle-double-right"
+                                                                    aria-hidden="true"></span></a></h3>
+                                                        <div class="inherit-font">
+                                                            <p></p>
+                                                            <p>An application may require access to web services
+                                                                residing behind a corporate firewall.</p>
+                                                            <p>A traditional full device VPN solution is not adequate
+                                                                due to manual steps required to enable the VPN on the
+                                                                device, and the security exposure by...</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <script
+                                            type="text/javascript">$(document).ready(function () { var l = new Array(); var c = new Map(); var k = $("#core-capabilities").find(".capability-summary").length; for (var g = 0; g < k; g++) { var m = $(".capability-summary:eq(" + g + ")").find("a").text(); var p = $(".capability-summary:eq(" + g + ")").find(".inherit-font").html(); l.push(m); c.set(m, p) } l.sort(); for (var e = 0; e < k; e++) { var f = $(".capability-summary:eq(" + e + ")").find("a"); f.text(l[e]); var n = f.attr("href"); var b = l[e].replace(/ /g, "-").substring(0, l[e].length - 1); var a = n.split("/"); a.pop(); a.push(b); var o = a.join("/"); f.attr("href", o); var d = c.get(l[e]); var h = $(".capability-summary:eq(" + e + ")").find(".inherit-font").html(d) } });</script>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portlet-boundary portlet-boundary_56_ portlet-static portlet-static-end portlet-borderless portlet-journal-content "
+                                id="p_p_id_56_INSTANCE_NL8CLTDdvjOm_"> <span id="p_56_INSTANCE_NL8CLTDdvjOm"></span>
+                                <div class="portlet-borderless-container" style="">
+                                    <div class="portlet-body">
+                                        <div class="journal-content-article">
+                                            <style type="text/css">
+                                                .summary-header h2 {
+                                                    font-weight: 300;
+                                                    font-size: 30px;
+                                                    text-transform: uppercase;
+                                                    color: #fff;
+                                                    margin: 25px 0 25px 0 !important
+                                                }
+
+                                                .summary-header a,
+                                                .summary-header p {
+                                                    color: #fff !important
+                                                }
+
+                                                .summary-header {
+                                                    background-color: #003f56;
+                                                    padding: 50px 35px 0 35px
+                                                }
+                                            </style>
+                                            <div class="summary-header" id="technical-approaches">
+                                                <h2>Technical Approaches</h2>
+                                                <p><span
+                                                        style="color: rgb(255, 255, 255); font-size: 16px; background-color: rgb(0, 63, 86);">There
+                                                        are multiple technical approaches you can use to securely
+                                                        integrate and authenticate&nbsp;apps with AirWatch and Identity
+                                                        Manager. Developers will commonly mix and match the different
+                                                        approaches below to achieve the desired functionality. The
+                                                        different&nbsp;approaches will have overlapping feature sets,
+                                                        but the best practice depends on your application deployment
+                                                        scenario and landscape.</span></p> <a
+                                                    href="technical-approaches" target="_self"
+                                                    class=" internal"><strong>See All Technical Approaches&nbsp;<span
+                                                            aria-hidden="true"
+                                                            class="fa fa-angle-double-right">&nbsp;</span></strong></a>
+                                            </div>
+                                        </div>
+                                        <div class="entry-links"> </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portlet-boundary portlet-boundary_101_ portlet-static portlet-static-end portlet-borderless portlet-asset-publisher "
+                                id="p_p_id_101_INSTANCE_RrP7NCh2ZrNj_"> <span id="p_101_INSTANCE_RrP7NCh2ZrNj"></span>
+                                <div class="portlet-borderless-container" style="">
+                                    <div class="portlet-body">
+                                        <div class="lfr-meta-actions add-asset-selector"> </div>
+                                        <div class="subscribe-action"> </div>
+                                        <style>
+                                            .approaches {
+                                                background: -webkit-linear-gradient(-92deg, #003f56 18%, #00516e 45%, #006990 75%);
+                                                background: -moz-linear-gradient(-92deg, #003f56 18%, #00516e 45%, #006990 75%);
+                                                background: -o-linear-gradient(-92deg, #003f56 18%, #00516e 45%, #006990 75%);
+                                                background: -ms-linear-gradient(-92deg, #003f56 18%, #00516e 45%, #006990 75%);
+                                                background: linear-gradient(182deg, #003f56 18%, #00516e 45%, #006990 75%);
+                                                padding-bottom: 50px;
+                                            }
+
+                                            .approaches h2,
+                                            .approaches h3 {
+                                                font-weight: 300;
+                                            }
+
+                                            .approaches h2 {
+                                                font-size: 30px;
+                                                text-transform: uppercase;
+                                                color: #ffffff;
+                                                margin: 25px 0px 25px 0px !important;
+                                            }
+
+                                            .approaches h3 {
+                                                color: #ffffff;
+                                                font-size: 18px;
+                                                text-align: left;
+                                                padding-top: 20px;
+                                                margin: 0 0 15px 0;
+                                            }
+
+                                            .approaches p {
+                                                padding-right: 30px;
+                                            }
+
+                                            .approaches p,
+                                            .approaches a {
+                                                color: #ffffff !important;
+                                            }
+
+                                            .approaches .entry {
+                                                margin-top: 20px;
+                                                float: top;
+                                            }
+
+                                            .approaches .entry .entry-header {
+                                                text-align: center;
+                                                height: 100px;
+                                                background-color: #ffffff;
+                                            }
+
+                                            .approaches .entry .entry-body {
+                                                text-align: left;
+                                                min-height: 200px;
+                                                padding-left: 30px;
+                                                padding-bottom: 10px;
+                                                background-color: #1f83a7;
+                                            }
+
+                                            .entry-header i {
+                                                margin-top: 20px;
+                                                color: #c2d4dd;
+                                            }
+
+                                            .entry-body a {
+                                                color: #ffffff;
+                                            }
+
+                                            .entry .entry-body div {
+                                                color: #ffffff !important;
+                                            }
+                                        </style>
+                                        <div class="tabbed-section approaches container-fluid">
+                                            <div class="row">
+                                                <div class="entry col-md-6">
+                                                    <div class="entry-header"> <i class="fa fa-search fa-5x"
+                                                            aria-hidden="true"></i> </div>
+                                                    <div class="entry-body">
+                                                        <h3>Identity Manager</h3>
+                                                        <div class="inherit-font">
+                                                            <p></p>
+                                                            <p>The Identity Manager component of Workspace ONE acts as a
+                                                                user store, a&nbsp;user catalog and Single Sign On (SSO)
+                                                                hub for your organization. Identity Manager’s APIs
+                                                                shorten app development time by providing consumable
+                                                                authentication and SSO...</p>
+                                                        </div> <a href="technical-approaches#identity-manager"
+                                                            translate-text="dc.ws1.learnMore" class=" internal"
+                                                            target="_self">Learn More <span
+                                                                class="fa fa-angle-double-right"
+                                                                aria-hidden="true"></span></a>
+                                                    </div>
+                                                </div>
+                                                <div class="entry col-md-6">
+                                                    <div class="entry-header"> <i class="fa fa-mobile fa-5x"
+                                                            aria-hidden="true"></i> </div>
+                                                    <div class="entry-body">
+                                                        <h3>App Wrapping</h3>
+                                                        <div class="inherit-font">
+                                                            <p>App Wrapping identifies specific app functions and
+                                                                replaces them with calls to the AirWatch SDK. This
+                                                                allows for a subset of AirWatch SDK capabilities to be
+                                                                added to an app without requiring any developer
+                                                                involvement. App Wrapping is only...</p>
+                                                        </div> <a href="technical-approaches#app-wrapping"
+                                                            translate-text="dc.ws1.learnMore" class=" internal"
+                                                            target="_self">Learn More <span
+                                                                class="fa fa-angle-double-right"
+                                                                aria-hidden="true"></span></a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12"></div>
+                                                <div class="entry col-md-6">
+                                                    <div class="entry-header"> <i class="fa fa-cog fa-5x"
+                                                            aria-hidden="true"></i> </div>
+                                                    <div class="entry-body">
+                                                        <h3>AppConfig.org</h3>
+                                                        <div class="inherit-font">
+                                                            <p>The AppConfig Community is a collection of
+                                                                industry-leading EMM solution providers and app
+                                                                developers that are making it simpler for developers to
+                                                                use native platform APIs to configure and secure apps in
+                                                                the enterprise.&nbsp;</p>
+                                                        </div> <a href="technical-approaches#appconfig.org"
+                                                            translate-text="dc.ws1.learnMore" class=" internal"
+                                                            target="_self">Learn More <span
+                                                                class="fa fa-angle-double-right"
+                                                                aria-hidden="true"></span></a>
+                                                    </div>
+                                                </div>
+                                                <div class="entry col-md-6">
+                                                    <div class="entry-header"> <i class="fa fa-cubes fa-5x"
+                                                            aria-hidden="true"></i> </div>
+                                                    <div class="entry-body">
+                                                        <h3>AirWatch SDK</h3>
+                                                        <div class="inherit-font">
+                                                            <p>The SDK code library from AirWatch can be used to enable
+                                                                additional app config and security capabilities that may
+                                                                not yet be available natively as part of the AppConfig
+                                                                Community. Certain use cases such as granular analytics
+                                                                can be provided...</p>
+                                                        </div> <a href="technical-approaches#airwatch-sdk"
+                                                            translate-text="dc.ws1.learnMore" class=" internal"
+                                                            target="_self">Learn More <span
+                                                                class="fa fa-angle-double-right"
+                                                                aria-hidden="true"></span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portlet-boundary portlet-boundary_56_ portlet-static portlet-static-end portlet-borderless portlet-journal-content "
+                                id="p_p_id_56_INSTANCE_tdgJLnG0vkoR_"> <span id="p_56_INSTANCE_tdgJLnG0vkoR"></span>
+                                <div class="portlet-borderless-container" style="">
+                                    <div class="portlet-body">
+                                        <div class="journal-content-article">
+                                            <style type="text/css">
+                                                .developer-resources {
+                                                    margin-top: 50px
+                                                }
+
+                                                .developer-resources i {
+                                                    color: #a7a7a7
+                                                }
+
+                                                .developer-resources>.row {
+                                                    margin-top: 30px
+                                                }
+
+                                                .developer-resources h2,
+                                                .developer-resources h3 {
+                                                    font-weight: 300
+                                                }
+
+                                                .developer-resources h2 {
+                                                    font-size: 30px;
+                                                    text-transform: uppercase;
+                                                    color: #565656;
+                                                    margin: 25px 0 25px 15px !important
+                                                }
+
+                                                .developer-resources h3 {
+                                                    background-color: #1897d1;
+                                                    color: #fff;
+                                                    font-size: 18px;
+                                                    text-align: left;
+                                                    padding: 5px 20px;
+                                                    margin: 0 0 15px 0;
+                                                    width: 250px;
+                                                    font-weight: bold
+                                                }
+
+                                                .resource .resource-list p {
+                                                    font-size: 18px
+                                                }
+
+                                                .resource .resource-list p a strong {
+                                                    font-size: 18px;
+                                                    line-height: 28px;
+                                                    font-weight: 300
+                                                }
+
+                                                .resource {
+                                                    border: 1px solid #e5e5e5;
+                                                    margin-bottom: 15px
+                                                }
+
+                                                .resource ul {
+                                                    list-style: none outside none;
+                                                    margin-top: 30px
+                                                }
+
+                                                .resource li {
+                                                    margin-left: 30px
+                                                }
+
+                                                .resource .resource-list p {
+                                                    font-size: 18px
+                                                }
+
+                                                .resource .resource-list p a strong {
+                                                    font-size: 18px;
+                                                    line-height: 28px;
+                                                    font-weight: 300
+                                                }
+
+                                                .resource i {
+                                                    color: #a7a7a7
+                                                }
+
+                                                @media(max-width:414px) {
+                                                    .resource ul {
+                                                        margin-left: 0
+                                                    }
+
+                                                    .resource li {
+                                                        margin-left: 15px
+                                                    }
+
+                                                    .resource>h3 {
+                                                        width: 210px
+                                                    }
+                                                }
+
+                                                @media(max-width:767px) {
+                                                    .resource>h3 {
+                                                        width: 210px
+                                                    }
+                                                }
+                                            </style>
+                                            <div class="tabbed-section developer-resources container-fluid"
+                                                id="resources">
+                                                <h2>Developer Resources</h2>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="resource">
+                                                            <h3>APIs &amp; SDKs</h3>
+                                                            <ul>
+                                                                <li class="resource-list">
+                                                                    <p><a href="apis/identity-manager/"
+                                                                            class=" internal" target="_self"><i
+                                                                                aria-hidden="true"
+                                                                                class="fa fa-cog">&nbsp;</i>Identity
+                                                                            Manager REST API</a></p>
+                                                                    <p><a href="../../ws1-sdk-uem-ios" class=" internal"
+                                                                            target="_self"><i aria-hidden="true"
+                                                                                class="fa fa-cog">&nbsp;</i>AirWatch SDK
+                                                                            for iOS</a></p>
+                                                                    <p><a href="../../ws1-sdk-uem-android"
+                                                                            class=" internal" target="_self"><i
+                                                                                aria-hidden="true"
+                                                                                class="fa fa-cog">&nbsp;</i>AirWatch SDK
+                                                                            for Android</a></p>
+                                                                </li>
+                                                                <li class="resource-list">
+                                                                    <p>&nbsp;</p>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="resource">
+                                                            <h3>Guides and Tutorials</h3>
+                                                            <ul>
+                                                                <li class="resource-list">
+                                                                    <p><a href="tutorials/Native-iOS/" class=" internal"
+                                                                            target="_self"><i aria-hidden="true"
+                                                                                class="fa fa-file-text">&nbsp;</i> iOS
+                                                                            Tutorials</a></p>
+                                                                </li>
+                                                                <li class="resource-list">
+                                                                    <p><a href="tutorials/Native-Android/"
+                                                                            class=" internal" target="_self"><i
+                                                                                aria-hidden="true"
+                                                                                class="fa fa-file-text">&nbsp;</i>
+                                                                            Android Tutorials</a></p>
+                                                                </li>
+                                                                <li class="resource-list">
+                                                                    <p><a href="tutorials/Xamarin-iOS/"
+                                                                            class=" internal" target="_self"><i
+                                                                                aria-hidden="true"
+                                                                                class="fa fa-file-text">&nbsp;</i>
+                                                                            Xamarin (iOS) Tutorials</a></p>
+                                                                </li>
+                                                                <li class="resource-list">
+                                                                    <p><a href="tutorials/Xamarin-Android/"
+                                                                            class=" internal" target="_self"><i
+                                                                                aria-hidden="true"
+                                                                                class="fa fa-file-text">&nbsp;</i>
+                                                                            Xamarin (Android) Tutorials</a></p>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="entry-links"> </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portlet-boundary portlet-boundary_devcentersamples_WAR_dpportlet_ portlet-static portlet-static-end portlet-borderless "
+                                id="p_p_id_devcentersamples_WAR_dpportlet_"> <span
+                                    id="p_devcentersamples_WAR_dpportlet"></span>
+                                <div class="portlet-borderless-container" style="">
+                                    <div class="portlet-body"> <!-- If available, show the error message -->
+                                        <style type="text/css">
+                                            @media(max-width:767px) {
+                                                .samples {
+                                                    margin: 0 15px !important
+                                                }
+
+                                                .samples i {
+                                                    margin-left: 20px !important
+                                                }
+
+                                                .samples .sample-info {
+                                                    margin-left: 45px !important
+                                                }
+
+                                                .samples .related-samples a {
+                                                    margin-left: 15px !important
+                                                }
+
+                                                .samples h3 {
+                                                    width: 170px !important
+                                                }
+                                            }
+
+                                            .samples {
+                                                border: 1px solid #e5e5e5;
+                                                margin-bottom: 15px
+                                            }
+
+                                            .samples .entry {
+                                                margin-top: 20px;
+                                                margin-bottom: 25px
+                                            }
+
+                                            .samples .entry h4,
+                                            .samples .entry span,
+                                            .samples .entry p {
+                                                text-align: left;
+                                                font-weight: 400
+                                            }
+
+                                            .samples .entry h4 {
+                                                font-size: 18px;
+                                                line-height: 18px;
+                                                margin: 10px 0 10px 0;
+                                                color: #565656
+                                            }
+
+                                            .samples .entry span,
+                                            .samples .entry p {
+                                                font-size: 16px;
+                                                margin-bottom: 6px
+                                            }
+
+                                            .samples .entry .author {
+                                                color: #adadad;
+                                                margin-right: 10px
+                                            }
+
+                                            .samples h3 {
+                                                background-color: #1897d1;
+                                                color: #fff;
+                                                font-size: 18px;
+                                                text-align: left;
+                                                padding: 5px 20px;
+                                                margin: 0 0 15px 0;
+                                                width: 250px
+                                            }
+
+                                            .samples .related-samples a {
+                                                margin-left: 56px
+                                            }
+
+                                            .samples i {
+                                                float: left;
+                                                margin: 0 0 0 55px;
+                                                color: #a7a7a7
+                                            }
+
+                                            .samples .sample-info {
+                                                margin-left: 80px
+                                            }
+
+                                            .samples .row {
+                                                margin: 0 -15px 0 -15px
+                                            }
+
+                                            .samples .row.description {
+                                                padding-left: 70px;
+                                                padding-bottom: 15px
+                                            }
+                                        </style>
+                                        <div class="samples" style="margin:0 35px;">
+                                            <h3 translate-text-dynamic="">Code Samples</h3>
+                                            <div class="row description"></div>
+                                            <div class="row">
+                                                <div class="entry col-md-6">
+                                                    <h4><i class="fa fa-share-alt" aria-hidden="true"></i></h4>
+                                                    <div class="sample-info">
+                                                        <h4>SCCM to AirWatch Auto Registration </h4>
+                                                        <p><span class="author" translate-text-dynamic="">Contributed
+                                                                By</span> JosueNegron</p>
+                                                        <p>This script connects to SCCM via WMI, gathers the devices in
+                                                            a collection, checks to see if they are registered in
+                                                            Airwatch, and if they are not it registers the device in
+                                                            Airwatch to the primary user ...</p>
+                                                        <p><a href="/samples/3747/sccm-to-airwatch-auto-registration"
+                                                                class=" internal" target="_self">
+                                                                <translate-text-dynamic> View Sample
+                                                                </translate-text-dynamic> <span
+                                                                    class="fa fa-angle-double-right"
+                                                                    aria-hidden="true"></span></a></p>
+                                                    </div>
+                                                </div>
+                                                <div class="entry col-md-6">
+                                                    <h4><i class="fa fa-share-alt" aria-hidden="true"></i></h4>
+                                                    <div class="sample-info">
+                                                        <h4>Execute AirWatch Rest API Call </h4>
+                                                        <p><span class="author" translate-text-dynamic="">Contributed
+                                                                By</span> rterakedis</p>
+                                                        <p>.SYNOPSIS This Poweshell script make a REST API call to an
+                                                            AirWatch server. This particular script is used to pull
+                                                            device information based on serial numbers pulled from a
+                                                            file. If you need to build y ...</p>
+                                                        <p><a href="/samples/994/execute-airwatch-rest-api-call"
+                                                                class=" internal" target="_self">
+                                                                <translate-text-dynamic> View Sample
+                                                                </translate-text-dynamic> <span
+                                                                    class="fa fa-angle-double-right"
+                                                                    aria-hidden="true"></span></a></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="related-samples"><a
+                                                    href="/samples?categories=Sample&amp;tags=AirWatch&amp;keywords=AirWatch"
+                                                    class=" internal" target="_self"> <translate-text-dynamic> See
+                                                        Related Code Samples </translate-text-dynamic> <span
+                                                        class="fa fa-angle-double-right" aria-hidden="true"></span></a>
+                                            </p>
+                                        </div>
+                                        <script
+                                            type="text/javascript">$(document).ready(function () { var a = function () { $(".resource-list").find("a").each(function () { var d = $(this).text(); if (typeof d != "undefined" || d != null || d != "") { var c = "AirWatch SDK for iOS"; var b = "AirWatch SDK for Android"; if (d.trim() == c.trim()) { $(this).attr("href", "../airwatch-ios") } if (d.trim() == b.trim()) { $(this).attr("href", "../ws1-sdk-uem-android") } } }) }; setTimeout(a, 1000) });</script>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portlet-boundary portlet-boundary_56_ portlet-static portlet-static-end portlet-borderless portlet-journal-content "
+                                id="p_p_id_56_INSTANCE_RNbJa8dFA3zT_"> <span id="p_56_INSTANCE_RNbJa8dFA3zT"></span>
+                                <div class="portlet-borderless-container" style="">
+                                    <div class="portlet-body">
+                                        <div class="journal-content-article">
+                                            <style type="text/css">
+                                                .community .right-com-entry {
+                                                    margin-bottom: 10px;
+                                                    border: 1px solid #dfdfdf;
+                                                    text-align: center;
+                                                    height: 190px;
+                                                    background-color: white
+                                                }
+
+                                                .community {
+                                                    background-color: #f4f4f4;
+                                                    margin-top: 30px;
+                                                    padding: 50px 0 30px 0
+                                                }
+
+                                                .community h2 {
+                                                    font-weight: 300;
+                                                    font-size: 30px;
+                                                    text-transform: uppercase;
+                                                    color: #565656;
+                                                    margin: 25px 0 25px 15px !important
+                                                }
+
+                                                .community .right-com-entry .appconfig-icon {
+                                                    background: #006990 none repeat scroll 0 0;
+                                                    height: 190px
+                                                }
+
+                                                .community .right-com-entry .slack-icon {
+                                                    background: #64a339 none repeat scroll 0 0;
+                                                    height: 190px
+                                                }
+
+                                                .community .right-com-entry .fa.fa-cog,
+                                                .community .right-com-entry .fa.fa-slack {
+                                                    font-size: 100px;
+                                                    margin-top: 46px
+                                                }
+
+                                                .community .right-com-entry .appconfig-icon>span,
+                                                .community .right-com-entry .slack-icon>span {
+                                                    margin-left: 23px
+                                                }
+
+                                                .community .vmware-code-img {
+                                                    background-position: center center;
+                                                    background-repeat: no-repeat;
+                                                    background-size: cover;
+                                                    min-height: 200px;
+                                                    padding: 30px 10px 10px 10px;
+                                                    background-color: #0095d3;
+                                                    text-align: center
+                                                }
+
+                                                .community .vmware-code-content {
+                                                    border: thin solid LightGray;
+                                                    height: 190px;
+                                                    margin: 0 0 10px 0;
+                                                    padding: 10px;
+                                                    background-color: white
+                                                }
+
+                                                .community .span8 {
+                                                    text-align: left
+                                                }
+
+                                                .community h3 {
+                                                    color: #565656;
+                                                    font-size: 24.98px;
+                                                    font-weight: 300;
+                                                    line-height: 24px;
+                                                    padding: 15px
+                                                }
+
+                                                .community h4 {
+                                                    color: #565656;
+                                                    font-size: 17.99px;
+                                                    font-weight: 400;
+                                                    padding-left: 15px;
+                                                    padding-right: 10px
+                                                }
+
+                                                .row .no-gutter {
+                                                    margin-left: 0;
+                                                    margin-right: 0
+                                                }
+
+                                                @media(max-width:980px) {
+
+                                                    .vmware-code-content,
+                                                    .right-com-entry {
+                                                        height: auto !important
+                                                    }
+                                                }
+
+                                                .portlet-borderless-container {
+                                                    margin-bottom: 0 !important
+                                                }
+                                            </style>
+                                            <div class="tabbed-section community container-fluid" id="community">
+                                                <h2>Community</h2>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="vmware-code">
+                                                            <div class="vmware-code-img"> <img alt=""
+                                                                    src="assets/home/VMwareCodeLogo.png/b62ccaaf-5120-482e-aeb5-017838f0733a" />&nbsp;
+                                                            </div>
+                                                            <div class="vmware-code-content">
+                                                                <h3>Join VMware {code}</h3>
+                                                                <h4>Become a part of one of the fastest-growing
+                                                                    developer communities&nbsp;devoted to cloud
+                                                                    infrastructure and enterprise mobility.</h4>
+                                                                <h4><a href="/join" class=" internal"
+                                                                        target="_self">Sign Up Now <span
+                                                                            aria-hidden="true"
+                                                                            class="fa fa-angle-double-right">&nbsp;</span></a>
+                                                                </h4>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="row no-gutter">
+                                                            <div class="span12">
+                                                                <div class="right-com-entry">
+                                                                    <div class="span4">
+                                                                        <div class="appconfig-icon"> <span
+                                                                                aria-hidden="true"
+                                                                                class="fa fa-cog">&nbsp;</span> </div>
+                                                                    </div>
+                                                                    <div class="span8">
+                                                                        <h3>AppConfig Community</h3>
+                                                                        <h4>An open and native approach ideal for most
+                                                                            common use cases.</h4>
+                                                                        <h4><a href="https://appconfig.org"
+                                                                                class=" external" target="_blank"
+                                                                                rel="noopener">Visit AppConfig.org <span
+                                                                                    aria-hidden="true"
+                                                                                    class="fa fa-angle-double-right">&nbsp;</span></a>
+                                                                        </h4>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row no-gutter">
+                                                            <div class="span12">
+                                                                <div class="right-com-entry">
+                                                                    <div class="span4">
+                                                                        <div class="slack-icon"> <span
+                                                                                aria-hidden="true"
+                                                                                class="fa fa-slack">&nbsp;</span> </div>
+                                                                    </div>
+                                                                    <div class="span8">
+                                                                        <h3>Connect on Slack</h3>
+                                                                        <h4>Join our Slack team to connect with
+                                                                            thousands of developers and experts in real
+                                                                            time.</h4>
+                                                                        <div class="clearfix"> &nbsp; </div>
+                                                                        <h4><a href="https://vmwarecode.slack.com/"
+                                                                                class=" external" target="_blank"
+                                                                                rel="noopener">Sign Up Now <span
+                                                                                    aria-hidden="true"
+                                                                                    class="fa fa-angle-double-right">&nbsp;</span></a>
+                                                                        </h4>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="entry-links"> </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portlet-boundary portlet-boundary_101_ portlet-static portlet-static-end portlet-borderless portlet-asset-publisher "
+                                id="p_p_id_101_INSTANCE_neXhTx2GZBA7_"> <span id="p_101_INSTANCE_neXhTx2GZBA7"></span>
+                                <div class="portlet-borderless-container" style="">
+                                    <div class="portlet-body">
+                                        <div class="lfr-meta-actions add-asset-selector"> </div>
+                                        <div class="lfr-meta-actions add-asset-selector"> </div>
+                                        <div class="subscribe-action"> </div>
+                                        <style>
+                                            .curated-articles {
+                                                background-color: #f4f4f4;
+                                                padding: 35px;
+                                            }
+
+                                            .curated-articles h2 {
+                                                color: #565656;
+                                                font-size: 30px;
+                                                text-transform: uppercase;
+                                                margin: 25px 15px !important;
+                                            }
+
+                                            .curated-articles h3 {
+                                                color: #565656;
+                                                font-size: 20px;
+                                                text-align: left;
+                                                padding-top: 10px;
+                                                margin: 0 0 10px 0;
+                                                font-weight: normal;
+                                            }
+
+                                            .curated-articles h4 {
+                                                color: #565656;
+                                                font-weight: normal;
+                                                text-transform: uppercase;
+                                            }
+
+                                            @media (max-width: 414px) {
+                                                .curated-articles {
+                                                    padding: 15px 0 15px 0;
+                                                }
+                                            }
+                                        </style>
+                                        <div class="curated-articles">
+                                            <h2 translate-text="dc.ws1.latestArticles">Latest Articles</h2>
+                                            <div class="row">
+                                                <div class="entry col-md-6">
+                                                    <h3>Featured Member: Cody De Arkland</h3>
+                                                    <h4>VMware {code} blog</h4>
+                                                    <p class=".inherit-font">Interview with VMware employee and active
+                                                        VMware {code} community member&nbsp;Cody De Arkland on his
+                                                        recent work around Amazon Echo.</p>
+                                                    <p><strong><a
+                                                                href="https://blogs.vmware.com/code/2017/06/12/featured-member-cody-de-arkland/"
+                                                                translate-text="dc.ws1.continueReadingTheArticle"
+                                                                class=" external" target="_blank"
+                                                                rel="noopener">Continue reading the article <span
+                                                                    class="fa fa-angle-double-right"
+                                                                    aria-hidden="true"></span></a></strong></p>
+                                                </div>
+                                                <div class="entry col-md-6">
+                                                    <h3>DockerCon 2017: Containers Go Mainstream?</h3>
+                                                    <h4>VMware Cloud-Native Apps Blog</h4>
+                                                    <p class=".inherit-font">DockerCon had a simple message this year:
+                                                        containers are on the precipice of going mainstream.&nbsp;To
+                                                        date, the industry has lacked production-ready container
+                                                        solutions, but technologies like&nbsp;VMware Integrated
+                                                        Containers (VIC) are pushing...</p>
+                                                    <p><strong><a
+                                                                href="https://blogs.vmware.com/cloudnative/dockercon-2017-containers-go-mainstream/"
+                                                                translate-text="dc.ws1.continueReadingTheArticle"
+                                                                class=" external" target="_blank"
+                                                                rel="noopener">Continue reading the article <span
+                                                                    class="fa fa-angle-double-right"
+                                                                    aria-hidden="true"></span></a></strong></p>
+                                                </div>
+                                            </div>
+                                            <h3 style="margin: 15px;"><a
+                                                    href="https://code.vmware.com/web/code/articles?category=Workspace%20One"
+                                                    translate-text="dc.ws1.viewMoreArticles" class=" external"
+                                                    target="_blank" rel="noopener">view more articles <span
+                                                        class="fa fa-angle-double-right" aria-hidden="true"></span></a>
+                                            </h3>
+                                            <h3> </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portlet-boundary portlet-boundary_56_ portlet-static portlet-static-end portlet-borderless portlet-journal-content "
+                                id="p_p_id_56_INSTANCE_MXo7eRXJ79x1_"> <span id="p_56_INSTANCE_MXo7eRXJ79x1"></span>
+                                <div class="portlet-borderless-container" style="">
+                                    <div class="portlet-body">
+                                        <div class="journal-content-article">
+                                            <div class="container-fluid" id="content-summary">
+                                                <div class="row no-edge-gutter">
+                                                    <div class="col-md-6">
+                                                        <div id="footer-content1"> <span aria-hidden="true"
+                                                                class="fa fa-file-text-o">DE</span>
+                                                            <h2 id="footer-title">Workspace ONE Intelligence Dev Center
+                                                            </h2>
+                                                            <div id="footer-desc"> Monitor, prioritize, troubleshoot,
+                                                                and trend mobile app performance in real time with the
+                                                                Workspace ONE Intelligence analytics platform for
+                                                                Android and iOS devices. </div> <a
+                                                                class="footer-url internal"
+                                                                href="/workspace-one-intelligence"
+                                                                target="_self"><strong>Learn More <span
+                                                                        aria-hidden="true"
+                                                                        class="fa fa-angle-double-right">&nbsp;</span></strong></a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div id="footer-content2"> <span aria-hidden="true"
+                                                                class="fa fa-search">&nbsp;</span>
+                                                            <h2 id="footer-title">Try the Hands-On Lab</h2>
+                                                            <div id="footer-desc"> Test-drive the full technical
+                                                                capabilities of Workspace ONE for free in minutes with
+                                                                no required installations. </div> <a
+                                                                class="footer-url external"
+                                                                href="https://my.vmware.com/en/web/vmware/evalcenter?p=workspace-one-18-hol&amp;src=so_5aa081bce49f6&amp;int_cid=70134000001SpVy"
+                                                                target="_blank" rel="noopener"><strong>Learn More <span
+                                                                        aria-hidden="true"
+                                                                        class="fa fa-angle-double-right">&nbsp;</span></strong></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <style type="text/css">
+                                                #footer-title {
+                                                    color: #fff !important;
+                                                    font-size: 25px !important;
+                                                    overflow: hidden;
+                                                    white-space: nowrap;
+                                                    text-overflow: ellipsis;
+                                                    height: 28px;
+                                                    line-height: 28px;
+                                                    width: 99%
+                                                }
+
+                                                #footer-desc {
+                                                    color: #fff !important;
+                                                    font-size: 18px !important;
+                                                    font-weight: 200;
+                                                    text-align: justify;
+                                                    overflow: hidden;
+                                                    height: 4.4em
+                                                }
+
+                                                .footer-url {
+                                                    color: #fff !important;
+                                                    font-size: 18px !important;
+                                                    margin-top: 10px;
+                                                    display: inline-block
+                                                }
+
+                                                #footer-content1 {
+                                                    padding: 75px;
+                                                    background-color: #00b2e7;
+                                                    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#00B2E7, endColorstr=#007EA3);
+                                                    background-image: -moz-linear-gradient(top, #00b2e7 0, #007ea3 100%);
+                                                    background-image: -webkit-linear-gradient(top, #00b2e7 0, #007ea3 100%);
+                                                    background-image: -ms-linear-gradient(top, #00b2e7 0, #007ea3 100%);
+                                                    background-image: linear-gradient(top, #00b2e7 0, #007ea3 100%);
+                                                    background-image: -o-linear-gradient(top, #00b2e7 0, #007ea3 100%);
+                                                    background-image: -webkit-gradient(linear, right top, right bottom, color-stop(0%, #00b2e7), color-stop(100%, #007ea3))
+                                                }
+
+                                                #footer-content2 {
+                                                    padding: 75px;
+                                                    background-color: #87c435
+                                                }
+
+                                                .content-summary .row {
+                                                    margin: 0 15px
+                                                }
+
+                                                #content-summary #footer-content1 .fa.fa-file-text-o {
+                                                    position: absolute;
+                                                    left: 45px;
+                                                    top: 45px;
+                                                    opacity: .1;
+                                                    font-size: 130px
+                                                }
+
+                                                #content-summary #footer-content2 .fa.fa-search {
+                                                    position: absolute;
+                                                    left: 60px;
+                                                    top: 45px;
+                                                    opacity: .1;
+                                                    font-size: 130px
+                                                }
+
+                                                #content-summary {
+                                                    padding: 20px 0 60px
+                                                }
+
+                                                @media(max-width:980px) {
+                                                    #content-summary .col-md-6 {
+                                                        padding-left: 0;
+                                                        padding-right: 0
+                                                    }
+                                                }
+
+                                                @media(max-width:414px) {
+
+                                                    #footer-content1,
+                                                    #footer-content2 {
+                                                        padding-left: 15px;
+                                                        padding-right: 15px
+                                                    }
+
+                                                    #content-summary #footer-content1 .fa.fa-file-text-o {
+                                                        left: 0
+                                                    }
+
+                                                    #content-summary #footer-content2 .fa.fa-search {
+                                                        left: 5px
+                                                    }
+                                                }
+                                            </style>
+                                        </div>
+                                        <div class="entry-links"> </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="portlet-boundary portlet-boundary_1_WAR_kaleodesignerportlet_ portlet-static portlet-static-end kaleo-designer-portlet "
+                id="p_p_id_1_WAR_kaleodesignerportlet_"> <span id="p_1_WAR_kaleodesignerportlet"></span> </div>
+            <form action="#" id="hrefFm" method="post" name="hrefFm"> <span></span> </form>
+        </div>
+        <footer>
+            <div class="gradient-hr"></div>
+            <div class="ph-footer">
+                <div class="footer-container-row ph-footer-row">
+                    <div class="footer-container-col"> <span> <a href="https://www.vmware.com" title="VMware Logo"
+                                target="_blank" class="nav-link external" rel="noopener"> <img alt="VMware Logo"
+                                    width="134" height="20" aria-label="VMware Logo"
+                                    src="/vmware-code-theme/images/VMware-by-Broadcom-Logo_color.svg" /> </a> </span>
+                    </div>
+                    <div class="footer-container-col"> <span class="ph-footer-col1">Company</span>
+                        <div class="footer-link-text ph-footer-col1-row2"> <a
+                                href="https://www.vmware.com/download/eula.html" class="clickable external"
+                                target="_blank" rel="noopener"> End User Terms &amp; Conditions </a> <br /> <a
+                                href="https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/company/vmw-modern-slavery-california-statement-2021.pdf"
+                                class="clickable external" target="_blank" rel="noopener"> California Transparency Act
+                                Statement </a> <br /> <a href="https://www.vmware.com/vmwarestore/"
+                                translate-text="dc.header.Store" class="clickable external" target="_blank"
+                                rel="noopener">Store</a> </div>
+                    </div>
+                    <div class="footer-container-col"> <span class="ph-footer-col1">Support</span>
+                        <div class="footer-link-text ph-footer-col1-row2"> <a href="/support" class="clickable internal"
+                                target="_self" rel="noopener noreferrer">Developer Support Options</a> <br /> <a
+                                href="https://dcpn.my.site.com/login?so=00Di0000000biLz" class="clickable external"
+                                target="_blank" rel="noopener">DC Partner Network</a> <br /> <a
+                                href="https://docs.vmware.com/" class="clickable external" target="_blank"
+                                rel="noopener">Product Documentation</a> <br /> <a
+                                href="https://www.vmware.com/resources/compatibility/search.php"
+                                class="clickable external" target="_blank" rel="noopener">Compatibility Guide</a> <br />
+                            <a class="feedback-trigger clickable">Report an Issue on this Page</a>
+                        </div>
+                    </div>
+                    <div class="footer-container-col ph-placeholder"></div>
+                    <div class="footer-container-col"> <span class="ph-footer-col1">Resources</span>
+                        <div class="footer-link-text ph-footer-col1-row2"> <a href="https://go.techzone.vmware.com/"
+                                class="clickable external" target="_blank" rel="noopener">VMware Tech Zone</a> <br /> <a
+                                href="https://www.vmware.com/training" class="clickable external" target="_blank"
+                                rel="noopener">Training</a> <br /> <a href="https://pathfinder.vmware.com/"
+                                class="clickable external" target="_blank" rel="noopener">Pathfinder</a> <br /> </div>
+                    </div>
+                    <div class="footer-container-col"> <span class="ph-footer-col1">VMware Social</span>
+                        <table class="ph-footer-col4">
+                            <tbody>
+                                <tr>
+                                    <td> <a href="https://twitter.com/VMware" title="Twitter" target="_blank"
+                                            rel="noopener" class="ph-footer-col4-row2 external"> <i
+                                                class="fa fa-twitter"></i> <span class="social-media">Twitter</span>
+                                        </a> </td>
+                                    <td> <a href="https://www.facebook.com/vmware" title="Facebook" target="_blank"
+                                            rel="noopener" class="ph-footer-col4-row2 external"> <i
+                                                class="fa fa-facebook-square"></i> <span
+                                                class="social-media">Facebook</span> </a> </td>
+                                </tr>
+                                <tr>
+                                    <td> <a href="https://www.youtube.com/user/vmwaretv" title="YouTube" target="_blank"
+                                            rel="noopener" class="ph-footer-col4-row2 external"> <i
+                                                class="fa fa-youtube-square"></i> <span
+                                                class="social-media">YouTube</span> </a> </td>
+                                    <td> <a href="https://www.linkedin.com/company/vmware" title="LinkedIn"
+                                            target="_blank" rel="noopener" class="ph-footer-col4-row2 external"> <i
+                                                class="fa fa-linkedin-square"></i> <span
+                                                class="social-media">LinkedIn</span> </a> </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="fb-links">
+                    <hr class="br-black mb-90 line-size" /> <span class="copy fb-links-text">Copyright &copy; 2005-2024
+                        Broadcom. All Rights Reserved. The term “Broadcom” refers to Broadcom Inc. and/or its
+                        subsidiaries.</span> <br /> <a href="https://www.vmware.com/help/legal.html"
+                        title="Terms of Use" target="_blank" rel="noopener" class="fb-links-text external">Terms of
+                        Use</a> <a href="https://www.vmware.com/help/privacy.html" title="Privacy" target="_blank"
+                        rel="noopener" class="fb-links-text external">Privacy</a> <a
+                        href="https://www.vmware.com/help/privacy/california-privacy-rights.html"
+                        title="Your California Privacy Rights" target="_blank" rel="noopener"
+                        class="fb-links-text external">Your California Privacy Rights</a> <a
+                        href="https://www.vmware.com/help/accessibility.html" title="Accessibility" target="_blank"
+                        rel="noopener" name="&amp;lpos=nav_footer : 8&amp;le=event52,event75"
+                        class="fb-links-text external">Accessibility</a> <a
+                        href="https://www.vmware.com/help/trademarks.html" title="Trademarks" target="_blank"
+                        class="fb-links-text external" rel="noopener">Trademarks</a> <a
+                        href=" https://www.vmware.com/help.html" title="Help" target="_blank" rel="noopener noreferrer"
+                        class="fb-links-text">Help</a> <a href="https://www.vmware.com/forms/customer_feedback.html"
+                        title="Feedback" class="fb-links-text clickable external" target="_blank"
+                        rel="noopener">Feedback</a> <a href="https://www.vmware.com/company/contact_sales.html"
+                        title="Contact Sales" target="_blank" rel="noopener" class="fb-links-text external">Contact
+                        Sales</a>
+                </div>
+            </div>
+        </footer>
+        <style>
+            .ph-footer .footer-container-row {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                gap: 1em;
+            }
+
+            .ph-footer .footer-container-col {
+                flex: 0 0 200px;
+                min-width: 200px;
+            }
+
+            .ph-footer {
+                background-color: #ffffff;
+                padding: 43px 26px 9px 3vw;
+            }
+
+            @media (min-width: 895px) {
+                .ph-footer .ph-placeholder {
+                    display: none;
+                }
+            }
+
+            .ph-footer .logo-container a {
+                padding: 0px 0px 0px 12px;
+            }
+
+            .ph-footer .logo-container a img {
+                margin-top: -10px;
+                margin-right: 26px;
+            }
+
+            .ph-footer table {
+                margin-top: 1em;
+                width: 100%;
+                border-spacing: 0px;
+            }
+
+            .ph-footer td {
+                width: 50%;
+            }
+
+            .ph-footer p {
+                font-size: 20px;
+                line-height: 18px;
+                color: #717074;
+                padding: 0px 0px 0px 12px;
+                margin-top: 29px;
+            }
+
+            .ph-footer .fb-links {
+                margin-top: -20px;
+                padding: 24px 0 15px 0px;
+                text-align: center;
+                background-color: white;
+            }
+
+            .ph-footer .fb-links .copy {
+                font-size: 14px;
+            }
+
+            .ph-footer span {
+                padding-right: 0px;
+            }
+
+            .ph-footer .fb-links a {
+                margin-left: 30px;
+                font-size: 14px;
+                padding-right: 20px;
+                color: #565656;
+            }
+
+            .ph-footer .fb-links a:hover {
+                color: #0094d2;
+            }
+
+            .ph-footer .fb-links-text {
+                /* P1 Body Text */
+                text-align: center;
+                font-family: "Metropolis";
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 24px;
+                /* identical to box height, or 171% */
+                /* Text */
+                color: #565656;
+            }
+
+            @media (max-width: 479px) {
+                .ph-footer .fb-links-text {
+                    display: block;
+                    text-align: left;
+                }
+
+                .ph-footer .fb-links a {
+                    margin-left: 0px;
+                }
+            }
+
+            .ph-footer .line-size {
+                /* margin-left: 110px; margin-right: 130px; margin-bottom: 15px; background-color: white; */
+                border-top: 1px solid #CCCCCC;
+            }
+
+            .ph-footer .ph-footer-row {
+                margin-top: -30px;
+                max-width: 1920px;
+            }
+
+            .ph-footer .ph-footer-col1 {
+                font-family: "Metropolis";
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 24px;
+            }
+
+            .ph-footer .ph-footer-col4 {
+                /* Link Text */
+                font-family: "Metropolis";
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 24px;
+                /* identical to box height, or 171% */
+                /* Indigo/Primary/Link/Normal */
+                color: #1d428a;
+            }
+
+            .ph-footer .ph-footer-col1-row2 {
+                margin-top: -100px;
+                /* P1 Body Text */
+                font-family: "Metropolis";
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 24px;
+                /* or 171% */
+                /* Text */
+                color: #565656;
+                overflow-wrap: break-word;
+                word-wrap: break-word;
+                word-break: break-word;
+            }
+
+            .ph-footer .ph-footer-col4-row2 {
+                /* Link Text */
+                font-family: "Metropolis";
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 24px;
+                /* identical to box height, or 171% */
+                /* Indigo/Primary/Link/Normal */
+                color: #1d428a;
+            }
+
+            .ph-footer .footer-link-text {
+                font-family: "Metropolis";
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 24px;
+                /* or 171% */
+                /* Text */
+                color: #565656;
+                overflow-wrap: break-word;
+                word-wrap: break-word;
+                word-break: break-word;
+                margin-top: 10px;
+            }
+
+            .ph-footer .social-media {
+                margin-left: 1em;
+            }
+
+            .gradient-hr {
+                content: "";
+                background: url(/vmware-code-theme/images/nav-marker.png) #5a39a0;
+                background-repeat: no-repeat;
+                height: 8px;
+                width: 100%;
+                display: block;
+                position: relative;
+            }
+
+            .ph-footer a {
+                text-decoration: none;
+            }
+
+            .clickable,
+            .clickable:visited {
+                color: #565656;
+            }
+
+            .clickable:hover {
+                color: #0094d2;
+            }
+
+            .feedback {
+                padding-left: 0.5rem;
+            }
+        </style>
+        <script
+            type="text/javascript">var apiCatogry = decodeURI(location.pathname.replace("/", "")).replaceAll(" ", "").replaceAll(".", "-").replaceAll("/", "-"); $("html.vmware").addClass("feedback-" + apiCatogry); (function (h, g, l, k, j, i) { window[k] = window[k] || {}; window[k]._q = window[k]._q || [];["identify", "page", "track", "metadata", "locale", "theme"].forEach(function (a) { window[k][a] = function () { var b = Array.prototype.slice.call(arguments); b.unshift(a); window[k]._q.push(b) } }); window[k]._url = l; window[k].init = window[k].init || function (c, b, a) { window[k]._clientId = c; window[k]._clientName = b; window[k]._configs = a || {}; j = h.createElement(g); j.async = 1; j.src = l + "?client_id=" + c + "&esp_object=" + k; i = h.getElementsByTagName(g)[0]; i.parentNode.insertBefore(j, i) } })(document, "script", "https://feedback.esp.vmware.com/assets/ipf/esp.js", "esp"); esp.init("esp-prod-133-jxoiz", "VMware Developer"); esp.identify("Guest");</script>
+    </div>
+    <div class="embeddedPortlets" style="display:none">
+        <div class="trackingPortlet">
+            <div class="portlet-boundary portlet-boundary_tracker_WAR_dpportlet_ portlet-static portlet-static-end portlet-borderless tracker-portlet "
+                id="p_p_id_tracker_WAR_dpportlet_"> <span id="p_tracker_WAR_dpportlet"></span>
+                <div class="portlet-borderless-container" style="">
+                    <div class="portlet-body">
+                        <script
+                            type="text/javascript">$(window).load(function () { DP.Tracking.initTrackingPortlet("https://developer.vmware.com/web/workspace-one/home?p_p_id=tracker_WAR_dpportlet&p_p_lifecycle=2&p_p_state=normal&p_p_mode=view&p_p_cacheability=cacheLevelPage") });</script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style type="text/css">
+        #global-alert-msg .cancel {
+            cursor: pointer;
+            color: #fff;
+            float: right;
+            left: 4%;
+            position: relative
+        }
+
+        #global-alert-msg {
+            background-color: #387c2c;
+            color: #fff;
+            border: 1px solid #387c2c;
+            font-size: 18px;
+            padding: 16px 5% !important;
+            top: 0;
+            z-index: 1000 !important;
+            height: 20px;
+            margin-top: 42px
+        }
+
+        #global-alert-msg a {
+            color: #fff;
+            font-weight: bold;
+            margin-left: 50px
+        }
+    </style>
+    <script src="/vmware-code-theme/js/body.js" type="text/javascript"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/video.js/5.10.5/video.min.js" type="text/javascript"></script>
+    <script
+        type="text/javascript">var analyticsLoaded = false; if (isGaEnabled || /Selenium|LoadPass|PhantomJS|Uptime/.test(navigator.userAgent)) { if (_gaq.length) { for (var i = 0; i < _gaq.length; i++) { console.log(_gaq[i]) } } _gaq.push = function () { console.log(arguments) } } else { if (!analyticsLoaded) { if (document.cookie.indexOf("OptanonConsent") > -1 && document.cookie.indexOf("groups=") > -1) { if (decodeURIComponent(document.cookie).indexOf("C0002:1") > -1) { (function () { var d = document.createElement("script"); d.type = "text/javascript"; d.async = true; d.src = "https://www.googletagmanager.com/gtag/js?id=G-LZ5W0Z51BZ"; var b = document.getElementsByTagName("script")[0]; b.parentNode.insertBefore(d, b); var a = document.createElement("script"); a.innerHTML = "window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);} gtag('js', new Date());gtag('config', 'G-LZ5W0Z51BZ');"; var c = document.getElementsByTagName("script")[0]; c.parentNode.insertBefore(a, c.nextSibling) })(); analyticsLoaded = true } } else { waitForConsentCookie() } var waitForConsent; function waitForConsentCookie() { if (document.cookie.indexOf("OptanonConsent") > -1 && document.cookie.indexOf("groups=") > -1) { clearTimeout(waitForConsent); if (decodeURIComponent(document.cookie).indexOf("C0002:1") > -1) { (function () { var d = document.createElement("script"); d.type = "text/javascript"; d.async = true; d.src = "http://www.googletagmanager.com/gtag/js?id=G-LZ5W0Z51BZ"; var b = document.getElementsByTagName("script")[0]; b.parentNode.insertBefore(d, b); var a = document.createElement("script"); a.innerHTML = "window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);} gtag('js', new Date());gtag('config', 'G-LZ5W0Z51BZ');"; var c = document.getElementsByTagName("script")[0]; c.parentNode.insertBefore(a, c.nextSibling) })(); analyticsLoaded = true } } else { waitForConsent = setTimeout(waitForConsentCookie, 250) } } } };</script>
+    <button style="display:none;" id="ot-sdk-btn" class="ot-sdk-show-settings"> Cookie Settings</button>
+    <script src="/notifications-portlet/notifications/js/main.js" type="text/javascript"></script>
+    <script src="/vmware-code-theme/js/main.js" type="text/javascript"></script>
+    <script type="text/javascript"></script>
+    <script
+        type="text/javascript">$(document).ready(function () { $('a[href!="#"]').each(function () { if (!$(this).hasClass("ga-link") && $(this).attr("href") && !$(this).attr("href").startsWith("javascript:")) { $(this).addClass("ga-link") } }) }); $(window).on("load", function () { utag_data.content_system = "Microsite : code" }); var profileUrl = window.location.protocol + "//" + window.location.hostname + (window.location.port ? ":" + window.location.port : "") + "/user/testing@example.com"; $("#_145_userAvatar ul > li > a[href*='control_panel/manage']").attr("href", profileUrl).on("click", function () { window.location.href = profileUrl; return false });</script>
+    <!--[if lte IE 9]> <script type="text/javascript">try{document.domain="vmware.com"}catch(e){};</script> <![endif]-->
+    <noscript><img src="/akam/13/pixel_3aa0e2a6?a=dD00MDU1ODcyNGNkMDEzNDUxMzEzOWIyZTI5OGRjYjdiOTgyZjdlYjgzJmpzPW9mZg=="
+            style="visibility: hidden; position: absolute; left: -999px; top: -999px;" /></noscript>
+    <script type="text/javascript" src="/n7BB0R/kX/pe/Q-m6/qmrIe0X35aqTc/uO9LbSpzkGYOY9/Qk1QICEi/QDR5Y/xseIEU"></script>
+</body>
+
+</html>

@@ -1,0 +1,1382 @@
+<!DOCTYPE html>
+<html class="vmware aui ltr" dir="ltr" lang="en-US">
+
+<head>
+    <title>Capability - VMware {code}</title>
+    <meta content="initial-scale=1.0, width=device-width" name="viewport" />
+    <meta name="google-site-verification" content="4sw39tzmJEJbKLHofv5AZrf3qetHBTFB_-FGLJzzP18" />
+    <script
+        type="text/javascript">if (typeof console === "undefined" || typeof console.log === "undefined") { console = {}; console.log = function (a) { return } } (function () { var a = new RegExp("^\\d+\\.\\d+\\.\\d+\\.\\d+$"); var b = a.test(window.location.hostname) || window.location.hostname.toLowerCase().indexOf("localhost") >= 0 || window.location.search.toLowerCase().indexOf("debug") >= 0; if (b == false) { var d = function (f, e) { console.log(f + " \n" + e); window._gaq = window._gaq || []; window._gaq.push(["_trackEvent", "Exception", f, e, 1, true]) }; window.addEventListener("error", function (g) { g.preventDefault(); g.stopPropagation(); var e = g.target && (g.target.src || g.target.currentSrc); if (e && g.target.src.indexOf("keepalive") >= 0) { return } var h = e ? ("Missing reference for '" + (g.target.src || g.target.currentSrc) + "'") : g.message; var f = "Where -> " + window.location.href + (e ? "" : (" | File -> " + g.filename + " | Line -> " + g.lineno)); d(h, f) }, true); var c = function () { if (window.jQuery) { $(document).ajaxError(function (j, h, g) { var i = "AjaxError: " + g.url + " -> Result " + j.result; var f = "Where -> " + window.location.href; d(i, f) }) } else { setTimeout(c, 250) } }; c(); window.onerror = function () { return true } } })();</script>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+    <link href="/vmware-code-theme/images/favicon.ico" rel="Shortcut Icon" />
+    <link rel="icon" href="https://www.vmware.com/favicon.ico" type="image/x-icon" />
+    <link href="https://code.vmware.com/web/workspace-one?p_l_id=6433654&amp;p_v_l_s_g_id=0" rel="canonical" />
+    <link href="https://code.vmware.com/zh/web/workspace-one?p_l_id=6433654&amp;p_v_l_s_g_id=0" hreflang="zh-CN"
+        rel="alternate" />
+    <link href="https://code.vmware.com/web/workspace-one?p_l_id=6433654&amp;p_v_l_s_g_id=0" hreflang="x-default"
+        rel="alternate" />
+    <link href="https://code.vmware.com/web/workspace-one?p_l_id=6433654&amp;p_v_l_s_g_id=0" hreflang="en-US"
+        rel="alternate" />
+    <link href="https://code.vmware.com/ja/web/workspace-one?p_l_id=6433654&amp;p_v_l_s_g_id=0" hreflang="ja-JP"
+        rel="alternate" />
+    <link rel="stylesheet" href="/everay-assets/vmware-code-theme/css/aui.css" />
+    <link rel="stylesheet" href="/everay-assets/vmware-code-theme/css/head.css" />
+    <link rel="stylesheet" href="/everay-assets/vmware-code-theme/css/main.css" />
+    <link rel="stylesheet" href="/everay-assets/vmware-code-theme/css/jquery.jstree.css" />
+    <link rel="stylesheet" href="/everay-assets/vmware-code-theme/css/dc/evidon.css" />
+    <link rel="stylesheet" href="/everay-assets/vmware-code-theme/css/dc/master.css" />
+    <link rel="stylesheet" href="/everay-assets/dp-portlet/css/artifactDetail.css" />
+    <link rel="stylesheet" href="/everay-assets/dp-portlet/css/searchResults.css" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/everay-assets/html/css/main.css" />
+    <link rel="stylesheet" href="/everay-assets/everay/css/everay-lib.css" />
+    <script>bazadebezolkohpepadr = "1802994684"</script>
+    <script type="text/javascript" src="/akam/13/6b778315" defer></script>
+</head>
+
+<body class=" yui3-skin-sam controls-visible signed-out public-page site"> <noscript>
+        <div class="unsupported-msg"> For full functionality of this site it is necessary to enable JavaScript. Here are
+            the <a href="http://www.enable-javascript.com/" target="_blank" rel="noopener" class=" external">
+                instructions how to enable JavaScript in your web browser</a>. </div>
+        <div class="unsupported-mask"></div>
+    </noscript>
+    <div class="ie-unsupported-msg" style="display:none;">
+        <div class="unsupported-msg"> For full functionality of this site it is necessary to update your Internet
+            Explorer (at least IE9). </div>
+        <div class="unsupported-mask"></div>
+    </div>
+    <div id="container">
+        <div class="navbar main-navbar" style="height: 60px;">
+            <div class="navbar-inner" style="background-color: #15193D!important;">
+                <div class="container">
+                    <div class="device-search"> <a href="javascript:void(0)" id="topnav-device-close-icon"><i
+                                class="fa fa-close" style="color: #fff;font-size:20px" aria-hidden="true"></i></a> <a
+                            href="javascript:void(0)" id="topnav-device-search-icon"><i class="fa fa-search"
+                                style="color: #fff;font-size:20px" aria-hidden="true"></i></a>
+                        <!-- <a href="javascript:void(0)" id="top-nav-device-main-icon"><i class="fa fa-bars"></i></a> -->
+                        <a href="javascript:void(0)" id="top-nav-device-main-icon" class="btn btn-navbar collapsed"
+                            data-toggle="collapse" data-target=".navbar-responsive-collapse"> <i class="fa fa-bars"
+                                style="color: #fff;font-size:20px"></i> </a>
+                    </div>
+                    <div> <a class="brand code_logo internal" href="/" rel="noopener" style="align-items: center;"
+                            target="_self">
+                            <div id="brand-logo-with-title-text"> <img
+                                    src="/vmware-code-theme/images/VMware-by-Broadcom-Logo_white.svg" alt="vmware logo"
+                                    style="height: 100%" />
+                                <div class="brand-text"> Developer </div>
+                            </div>
+                        </a> </div>
+                    <div class="nav-collapse navbar-responsive-collapse collapse" style="height: 0px;">
+                        <ul id="nav-header-link" class="nav">
+                            <li class="first" style="border-left: 1px solid rgba(255, 255, 255, 0.15)"> <a href="/home"
+                                    class=" internal" target="_self"> <span translate-text="dc.Home">Home</span> </a>
+                            </li>
+                            <li> <a href="/products" class=" internal" target="_self"> <span
+                                        translate-text="dc.Products">Products</span> </a> </li>
+                            <li> <a href="/apis" class=" internal" target="_self"> <span
+                                        translate-text="dc.APIs">APIs</span> </a> </li>
+                            <li> <a href="/powercli" class=" internal" target="_self"> <span
+                                        translate-text="dc.APIs">PowerCLI</span> </a> </li>
+                            <li> <a href="/samples" class=" internal" target="_self"> <span
+                                        translate-text="dc.Samples">Code Samples</span> </a> </li>
+                            <li> <a href="/sdks" class=" internal" target="_self"> <span
+                                        translate-text="dc.SDKs">SDKs</span> </a> </li>
+                            <li> <a href="/tools" class=" internal" target="_self"> <span
+                                        translate-text="dc.Tools">Tools</span> </a> </li>
+                            <li> <a href="/join" class=" internal" target="_self"> <span
+                                        translate-text="dc.JoinCode">Join {code}</span> </a> </li>
+                        </ul> <!-- <hr class="nav" style="border-top:1px solid #CCCCCC;"> -->
+                        <ul class="nav pull-right" id="nav-header-items-right">
+                            <li class="desktop-search"> <a href="javascript:void(0)" id="topnav-search-icon"
+                                    style="color: #FFFFFF;"><i class="fa fa-search" aria-hidden="true"></i></a>
+                                <form method="get" action="/web/dp/search" id="topnav-search-form"
+                                    style="display:none;margin-left:12px;margin-top:3px;" class=" internal"> <input
+                                        class="topnav-search-input" placeholder="Search VMware Developer"
+                                        translate-text-placeholder="dc.SearchVMwareCode" type="text" required="required"
+                                        value="" name="keywords" /> <button type="submit" tabindex="-1"
+                                        class="topnav-search-btn"><i class="fa fa-search"></i></button> </form>
+                            </li>
+                            <li id="localeSelector" class="locale"
+                                style="border-right: 1px solid rgba(255,255,255, 0.15);"> <a href="#"> <i
+                                        class="fa fa-globe"></i>English </a> </li>
+                            <script
+                                type="text/javascript">$(document).ready(function () { $("#localeSelector").on("click", function () { var a = '<ul id="availableLocales">    <li>        <a data-locale="zh" href="javascript:void(0);">            中文        </a>    </li>    <li>        <a data-locale="en" href="javascript:void(0);">            English        </a>    </li>    <li>        <a data-locale="ja" href="javascript:void(0);">            日本語        </a>    </li></ul>'; alertEx({ header: "Choose a Language", message: a, ok: "Cancel" }); $("#availableLocales a").off("click").on("click", function () { var c = window.location.pathname; var b = (c[0] === "/" && (c[3] === "/" || c.length === 3)) ? c.substring(3) : c; window.location = "/" + $(this).data("locale") + b + window.location.search + window.location.hash }); return false }) });</script>
+                            <!-- <li class="divider-vertical" style="height: 15px;margin:10px 10px 0 0px"></li> -->
+                            <li class="login-tooltip"> <a
+                                    href="https://devportal-csp-authenticator.esp.vmware.com/api/auth/discovery?targetUri=https://developer.vmware.com/web/dp/horizon-login"
+                                    id="login-trigger" style="background: none;padding-left: 10px;font-weight: normal;"
+                                    target="_self" class=" internal"> Login </a> <span class="login-tooltiptext">Login
+                                    with your VMware account (Customer Connect credentials).</span> </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="device-search">
+                <div class="device-topnav-search">
+                    <form method="get" action="/web/dp/search" style="width: 100%;" class=" internal"> <input
+                            class="topnav-search-input device" placeholder="Search" required="required" value=""
+                            name="keywords" type="text" /> <button type="submit" tabindex="-1"
+                            class="device-topnav-search-btn"><i class="fa fa-search"></i></button> </form>
+                </div>
+            </div>
+        </div>
+        <div style="clear:both"></div>
+        <script
+            type="text/javascript">$(document).ready(function () { var b = function () { var e = "a[href='" + window.location.pathname.replace("/web", "").replace("/dp", "") + "']"; var d = document.querySelector("#nav-header-link"); var c = d.querySelector(e); if (c) { c.classList.add("active-tab") } }; var a = function () { const c = "#container > div.navbar.main-navbar > div.navbar-inner.user-nav > div > div.nav-collapse.navbar-responsive-collapse.collapse"; element = document.querySelector(c); if (element) { element.classList.toggle("shadow") } }; b(); $("#sign-out").click(function (f) { f.preventDefault(); const c = "https://devportal-csp-authenticator.esp.vmware.com/api/auth/logout"; const g = sessionStorage.getItem("idToken"); const d = sessionStorage.getItem("refreshToken"); const e = c.concat("/", d, "/", g, "?allowCspLogoutPage=true"); document.cookie = "REDIRECT=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;"; sessionStorage.clear(); window.open("/c/portal/logout", "_blank"); window.open(e, "_self") }); $(document).on("click", "#topnav-search-icon", function () { $("#topnav-search-icon").hide(); $("#topnav-search-form").show(); $(".topnav-search-input").focus() }); $(document).click(function () { $("#topnav-search-icon").show(); $("#topnav-search-form").hide() }); $(document).on("click", ".topnav-search-input, .topnav-search-btn, #topnav-search-icon", function (c) { c.stopPropagation() }); $("#container .main-navbar .navbar-inner").addClass("user-nav"); $("#container .nav_site").addClass("user-nav"); if ($("body").find(".portlet-dockbar").length > 0) { $(".vmware #container .navbar.main-navbar").addClass("nav-admin"); $(".vmware .nav_site.user-nav").addClass("nav-admin"); $(".vmware #container > #content").addClass("nav-admin") } $(document).on("click", "#topnav-device-search-icon", function () { $(".device-topnav-search").slideDown(); $("#topnav-device-close-icon").show(); $("#topnav-device-search-icon").hide(); $(".topnav-search-input.device").focus() }); $(document).on("click", "#topnav-device-close-icon", function () { $(".device-topnav-search").slideUp(); $("#topnav-device-close-icon").hide(); $("#topnav-device-search-icon").show() }); $(document).on("click", "#top-nav-device-main-icon", function () { $(".device-topnav-search").slideUp(); $("#topnav-device-close-icon").hide(); $("#topnav-device-search-icon").show(); a() }) });</script>
+        <div id="content" class="clearfix"> <!-- Styles for SDK/Cert Detail Page -->
+            <style type="text/css">
+                .description {
+                    padding: 5px 15px 0
+                }
+
+                .description .portlet-title-text,
+                .related-resources .portlet-title-text {
+                    display: none
+                }
+
+                .description .portlet-topper,
+                .description .portlet {
+                    border: 0
+                }
+
+                .forums .portlet-borderless-container {
+                    min-height: 0
+                }
+
+                .related-resources h2 {
+                    font-size: 20px;
+                    margin: 0 0 0 12px
+                }
+
+                .related-resources ul {
+                    list-style: none outside none;
+                    margin: 0
+                }
+
+                .related-resources ul li {
+                    border-top: 1px solid #e6e6e6;
+                    line-height: 20px;
+                    padding-bottom: 7px;
+                    padding-top: 5px;
+                    vertical-align: top
+                }
+
+                .related-resources ul li:first-child {
+                    border-top: medium none !important
+                }
+            </style>
+            <div class="community-details-page" id="main-content" role="main">
+                <style>
+                    @media (max-width : 979px) {
+                        .vmware .bread-crumb .social-links {
+                            padding: 0;
+                            padding-top: 15px;
+                        }
+                    }
+
+                    @media (min-width : 980px) {
+                        .vmware .bread-crumb .social-links {
+                            padding: 0;
+                            padding-top: 18px;
+                        }
+                    }
+
+                    @media (max-width : 767px) {
+                        .vmware .social-links {
+                            display: none !important;
+                        }
+
+                        .vmware .bread-crumb .breadcrumb-search-input {
+                            width: auto !important;
+                        }
+
+                        .vmware .bread-crumb .breadcrumb {
+                            padding-bottom: 0px !important;
+                            margin-bottom: 0px !important;
+                        }
+
+                        .vmware .internal-global-search {
+                            margin: 0px;
+                        }
+                    }
+
+                    .vmware .bread-crumb {
+                        background: #fff none repeat scroll 0 0;
+                        height: 54px;
+                        padding: 0;
+                        width: 100%;
+                    }
+
+                    .vmware .bread-crumb .breadcrumb {
+                        background: transparent;
+                        padding: 20px 0 10px 0px;
+                    }
+
+                    .vmware .bread-crumb .breadcrumb a.breadcrumb-item {
+                        color: #646565;
+                        font-size: 16px;
+                    }
+
+                    .vmware .bread-crumb .breadcrumb a.active {
+                        color: #0D9AE5 !important;
+                    }
+
+                    .vmware .bread-crumb .breadcrumb-search-input {
+                        border: 0px solid #646565;
+                        line-height: 48px;
+                        height: 48px;
+                        color: #64657A;
+                        font-size: 18px;
+                        padding: 0px 10px;
+                        margin-bottom: 0px;
+                        width: 80%;
+                    }
+
+                    .vmware .bread-crumb .breadcrumb-search-input:focus {
+                        color: #64657A;
+                        box-shadow: none !important;
+                    }
+
+                    .vmware .internal-global-search.internal {
+                        padding-top: 5px;
+                    }
+
+                    .vmware .bread-crumb .bdivider {
+                        color: #646565;
+                        padding: 0 2px;
+                    }
+
+                    .vmware .bread-crumb .breadcrumb_search form {
+                        margin: 0px;
+                    }
+
+                    .vmware .bread-crumb .social-links .overlay-con {
+                        margin-left: 0px;
+                    }
+
+                    .vmware .bread-crumb [class*="span"] {
+                        margin-left: 0px;
+                    }
+
+                    .vmware .overridecollapse {
+                        display: none !important;
+                    }
+
+                    .vmware #main-content.top-level-page .bread-crumb {
+                        display: block;
+                    }
+
+                    .vmware .bread-crumb .social-links a {
+                        color: #CCCCCC;
+                    }
+
+                    .vmware .breadcrumb-search-icon {
+                        color: #CCCCCC;
+                        font-size: 20px;
+                        font-weight: normal;
+                        position: relative;
+                        top: 4px;
+                    }
+
+                    .vmware .icon-search.breadcrumb-search-icon {
+                        color: #cccccc;
+                        font-size: 18px;
+                    }
+
+                    .vmware .bread-crumb-layout {
+                        border-bottom: 1px solid #cbcbcb;
+                    }
+
+                    .vmware .bread-crumb .social-links {
+                        margin: 0 !important;
+                    }
+
+                    .vmware #global-alert-msg.artifact-style {
+                        text-align: left;
+                        background-color: rgb(254, 236, 181);
+                        border: 1px solid rgb(239, 214, 3);
+                        color: rgb(107, 105, 98);
+                        font-family: "proxima nova_light", Proxima Nova, verdana, sans serif;
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 16px;
+                        margin-top: 0px;
+                    }
+
+                    .vmware #global-alert-msg.artifact-style a {
+                        color: rgb(13, 154, 229);
+                        font-family: "proxima nova_light", Proxima Nova, verdana, sans serif;
+                        font-size: 16px;
+                        font-weight: 400;
+                        margin: 0;
+                    }
+
+                    .vmware #global-alert-msg.artifact-style .cancel {
+                        display: none;
+                    }
+
+                    @media (max-width : 1140px) {
+                        .vmware #global-alert-msg.artifact-style {
+                            font-size: 14px !important;
+                        }
+                    }
+                </style>
+                <div class="bread-crumb-layout">
+                    <div class="bread-crumb">
+                        <div class="span9">
+                            <nav class="breadcrumb"> <!-- <a class="breadcrumb-item" href="/home">VMware {code}</a> -->
+                                <span class="bdivider">&nbsp;/&nbsp;</span> <a class="breadcrumb-item internal"
+                                    href="/products" target="_self"> Dev Centers </a> <span
+                                    class="bdivider">&nbsp;/&nbsp;</span> <a class="breadcrumb-item internal"
+                                    href="/ws1-product" target="_self"> Workspace ONE </a> <span
+                                    class="bdivider">&nbsp;/&nbsp;</span> <a class="breadcrumb-item internal"
+                                    href="/ws1-product/core-capabilities" target="_self"> Core Capabilities </a>
+                                <span class="bdivider">&nbsp;/&nbsp;</span> <a class="breadcrumb-item active internal"
+                                    href="." target="_self">
+                                    Capability </a>
+                            </nav>
+                        </div>
+                        <div class="span2" style="float:right; display: none;">
+                            <div class="social-links">
+                                <div class="overlay-con"> <a
+                                        href="https://www.twitter.com/home?status=/ws1-product/core-capabilities/Prevent-App-Backup"
+                                        target="_blank" class=" external" rel="noopener"><i
+                                            class="fa fa-twitter"></i></a>
+                                    <div class="social-overlay"> <i class="fa fa-twitter"></i> <a
+                                            href="https://www.twitter.com/home?status=/ws1-product/core-capabilities/Prevent-App-Backup"
+                                            target="_blank" class=" external" rel="noopener">Share</a> </div>
+                                </div>
+                                <div class="overlay-con"> <a
+                                        href="https://www.facebook.com/sharer/sharer.php?u=/ws1-product/core-capabilities/Prevent-App-Backup"
+                                        target="_blank" class=" external" rel="noopener"><i
+                                            class="fa fa-facebook"></i></a>
+                                    <div class="social-overlay"> <i class="fa fa-facebook"></i> <a
+                                            href="https://www.facebook.com/sharer/sharer.php?u=/ws1-product/core-capabilities/Prevent-App-Backup"
+                                            target="_blank" class=" external" rel="noopener">Share</a> </div>
+                                </div>
+                                <div class="overlay-con"> <a target="_blank"
+                                        href="https://www.linkedin.com/shareArticle?mini=true&amp;url=/ws1-product/core-capabilities/Prevent-App-Backup&amp;title=Capability&amp;summary=&amp;source=developer.vmware.com"
+                                        class=" external" rel="noopener"><i class="fa fa-linkedin"></i></a>
+                                    <div class="social-overlay"> <i class="fa fa-linkedin"></i> <a target="_blank"
+                                            href="https://www.linkedin.com/shareArticle?mini=true&amp;url=/ws1-product/core-capabilities/Prevent-App-Backup&amp;title=Capability&amp;summary=&amp;source=developer.vmware.com"
+                                            class=" external" rel="noopener">Share</a> </div>
+                                </div>
+                                <div class="overlay-con"> <a target="_blank"
+                                        href="https://plus.google.com/share?url=/ws1-product/core-capabilities/Prevent-App-Backup"
+                                        class=" external" rel="noopener"><i class="fa fa-google-plus"></i></a>
+                                    <div class="social-overlay"> <i class="fa fa-google-plus"></i> <a target="_blank"
+                                            href="https://plus.google.com/share?url=/ws1-product/core-capabilities/Prevent-App-Backup"
+                                            class=" external" rel="noopener">Share</a> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="clear:both"></div>
+                <script>$(function () { var d = window.location.pathname; if (d == "/web/code/events") { var b = getParameterByName("category"); var c = getParameterByName("id"); var a; if (b != null && b != "") { a = b.replace(/_/g, " ") } if (c != null && c != "") { a = $("#doc-title").text() } $(".breadcrumb-item.active").text(a); $(".breadcrumb-item.active").attr("href", window.location.href) } else { $(".breadcrumb-item.active").text(document.title.split("-")[0].trim()) } });</script>
+                <div class="row-fluid">
+                    <div class="portlet-column portlet-column-only span12" id="column-1">
+                        <div class="portlet-dropzone portlet-column-content portlet-column-content-first"
+                            id="layout-column_column-1">
+                            <div class="portlet-boundary portlet-boundary_56_ portlet-static portlet-static-end portlet-borderless portlet-journal-content "
+                                id="p_p_id_56_INSTANCE_vBr4ZdiRfzsy_"> <span id="p_56_INSTANCE_vBr4ZdiRfzsy"></span>
+                                <div class="portlet-borderless-container" style="">
+                                    <div class="portlet-body">
+                                        <div class="journal-content-article">
+                                            <style>
+                                                .overview {
+                                                    padding: 20px 0px 55px;
+                                                }
+
+                                                .overview h2 {
+                                                    font-size: 24px;
+                                                    font-weight: 300;
+                                                    margin-bottom: 25px;
+                                                }
+
+                                                .overview p {
+                                                    font-weight: 400;
+                                                }
+
+                                                .overview hr {
+                                                    border: 1px solid #F6F6F6;
+                                                    margin: 5px 0 15px 0;
+                                                    padding-bottom: 0;
+                                                }
+
+                                                .overview .legend strong {
+                                                    font-weight: 300;
+                                                }
+
+                                                .overview .recommended-and-supported {
+                                                    margin: 10px 0 0 0;
+                                                }
+
+                                                .overview .recommended-and-supported strong {
+                                                    font-size: 16px;
+                                                    font-weight: 400;
+                                                }
+
+                                                #footer-title {
+                                                    color: #fff !important;
+                                                    font-size: 25px !important;
+                                                    overflow: hidden;
+                                                    white-space: nowrap;
+                                                    text-overflow: ellipsis;
+                                                    height: 28px;
+                                                    line-height: 28px;
+                                                    width: 99%;
+                                                }
+
+                                                #footer-desc {
+                                                    color: #fff !important;
+                                                    font-size: 18px !important;
+                                                    font-weight: 200;
+                                                    text-align: justify;
+                                                    overflow: hidden;
+                                                    height: 4.4em;
+                                                }
+
+                                                .footer-url {
+                                                    color: #fff !important;
+                                                    font-size: 18px !important;
+                                                    margin-top: 10px;
+                                                    display: inline-block;
+                                                }
+
+                                                #footer-content1 {
+                                                    padding: 48px;
+                                                    background-color: #00B2E7;
+                                                    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#00B2E7, endColorstr=#007EA3);
+                                                    background-image: -moz-linear-gradient(top, #00B2E7 0%, #007EA3 100%);
+                                                    background-image: -webkit-linear-gradient(top, #00B2E7 0%, #007EA3 100%);
+                                                    background-image: -ms-linear-gradient(top, #00B2E7 0%, #007EA3 100%);
+                                                    background-image: linear-gradient(top, #00B2E7 0%, #007EA3 100%);
+                                                    background-image: -o-linear-gradient(top, #00B2E7 0%, #007EA3 100%);
+                                                    background-image: -webkit-gradient(linear, right top, right bottom, color-stop(0%, #00B2E7), color-stop(100%, #007EA3));
+                                                }
+
+                                                #footer-content2 {
+                                                    padding: 48px;
+                                                    background-color: #87c435;
+                                                }
+
+                                                .content-summary .row {
+                                                    margin: 0 15px;
+                                                }
+
+                                                .approaches h2 {
+                                                    font-size: 32px;
+                                                    font-weight: 300;
+                                                    margin: 15px 0px 30px;
+                                                }
+
+                                                .approaches h3 {
+                                                    font-size: 24px;
+                                                    font-weight: 300;
+                                                    padding: 8px 0px;
+                                                }
+
+                                                .approaches .container-fluid {
+                                                    padding-top: 10px;
+                                                    padding-bottom: 15px;
+                                                }
+
+                                                .approaches .approach p,
+                                                .approaches .approach li {
+                                                    /*font-weight: 300;*/
+                                                    font-size: 16px;
+                                                    line-height: 24px;
+                                                }
+
+                                                .approach {
+                                                    background-color: #F4F4F4;
+                                                }
+
+                                                .approach .center-border {
+                                                    border: 1px solid #E5E5E5;
+                                                    background-color: #FFFFFF;
+                                                    margin: 15px 0 0 0;
+                                                }
+
+                                                .approach span {
+                                                    font-size: 18px;
+                                                }
+
+                                                .tutorial {
+                                                    border: 1px solid #E5E5E5;
+                                                    padding-bottom: 20px;
+                                                }
+
+                                                .tutorial>h3 {
+                                                    background-color: #1897d1;
+                                                    color: white;
+                                                    margin-bottom: 20px;
+                                                    margin-top: 0;
+                                                    padding: 5px 7px;
+                                                    text-align: center;
+                                                    width: 280px;
+                                                    font-size: 20px;
+                                                    font-weight: bold;
+                                                }
+
+                                                .tutorial .tutorial-list p {
+                                                    font-size: 18px;
+                                                    margin: 0 0 10px 0 !important;
+                                                }
+
+                                                .tutorial .tutorial-list p a strong {
+                                                    font-size: 18px;
+                                                    line-height: 28px;
+                                                    font-weight: 400;
+                                                }
+
+                                                .tutorial i {
+                                                    color: #A7A7A7;
+                                                }
+
+                                                ul.urllinks {
+                                                    list-style: none outside none;
+                                                    margin: 0 0 0 40px;
+                                                }
+
+                                                .approach .row {
+                                                    margin: 40px 50px 40px 50px;
+                                                }
+
+                                                .supported-color {
+                                                    color: #87c435;
+                                                }
+
+                                                h2 {
+                                                    color: #333333 !important;
+                                                }
+
+                                                .related-core-capabilities .col-md-6.col-sm-12:last-child {
+                                                    margin-bottom: 30px;
+                                                }
+
+                                                .related-core-capabilities .capabilities-entry {
+                                                    height: 100px;
+                                                }
+
+                                                .related-core-capabilities .capabilities-icon {
+                                                    width: 100px;
+                                                    height: 100%;
+                                                    float: left;
+                                                    text-align: center;
+                                                }
+
+                                                .related-core-capabilities .col-md-6.col-sm-12:nth-of-type(3n+1) .capabilities-icon {
+                                                    background-color: #0095D3;
+                                                }
+
+                                                .related-core-capabilities .col-md-6.col-sm-12:nth-of-type(3n+2) .capabilities-icon {
+                                                    background-color: #64A339;
+                                                }
+
+                                                .related-core-capabilities .col-md-6.col-sm-12:nth-of-type(3n+3) .capabilities-icon {
+                                                    background-color: #006990;
+                                                }
+
+                                                .related-core-capabilities .capabilities-summary {
+                                                    background-color: #F4F4F4;
+                                                    height: 100%;
+                                                    padding-left: 120px;
+                                                }
+
+                                                .related-core-capabilities .capabilities-summary h3 {
+                                                    padding-top: 20px;
+                                                    font-size: 24px;
+                                                    font-weight: 300;
+                                                }
+
+                                                .related-core-capabilities .capabilities-icon i {
+                                                    margin-top: 15px;
+                                                }
+
+                                                .related-core-capabilities h2 {
+                                                    color: #D0D0D0 !important;
+                                                    text-transform: uppercase;
+                                                }
+
+                                                .page-title h1 {
+                                                    color: #565656 !important;
+                                                    font-size: 35px;
+                                                    font-weight: 300;
+                                                    text-align: left;
+                                                    margin-top: 7px;
+                                                    padding-left: 15px;
+                                                }
+
+                                                @media (max-width: 768px) {
+                                                    .approach .row {
+                                                        margin: 5px 5px 5px 5px !important;
+                                                    }
+
+                                                    .tutorial {
+                                                        margin-bottom: 15px;
+                                                    }
+                                                }
+
+                                                @media (max-width: 414px) {
+                                                    .tutorial>h3 {
+                                                        width: 210px;
+                                                        ;
+                                                    }
+
+                                                    .overview {
+                                                        padding-bottom: 30px;
+                                                    }
+
+                                                    .approaches .container-fluid {
+                                                        padding-top: 0px;
+                                                    }
+
+                                                    .approaches h2 {
+                                                        margin: 15px 0px 15px 15px;
+                                                    }
+
+                                                    .tutorial>h3 {
+                                                        width: 210px;
+                                                    }
+                                                }
+
+                                                @media (max-width: 768px) {}
+
+                                                @media (max-width: 1079px) {
+                                                    .overview [class*="col-"] {
+                                                        padding-left: 0;
+                                                    }
+                                                }
+
+                                                .overview [class*="col-"] {
+                                                    padding-right: 0;
+                                                }
+
+                                                .core-capability-detail .recommended-and-supported .col-xs-6 {
+                                                    overflow: hidden;
+                                                    text-overflow: ellipsis;
+                                                    white-space: nowrap;
+                                                }
+                                            </style>
+                                            <div class="core-capability-detail">
+                                                <div class="overview">
+                                                    <div class="page-title">
+                                                        <h1><span translate-text="”dc.ws1.coreCapability”">Core
+                                                                Capability</span>: Prevent App Backup</h1>
+                                                        <div
+                                                            style="box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.35); margin: 0 -45px 45px -45px;">
+                                                            &nbsp; </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-7 inherit-font">
+                                                            <h2>Prevent App Backup <span
+                                                                    translate-text="dc.ws1.overview">Overview</span>
+                                                            </h2>
+                                                            <p></p>
+                                                            <p>Device users may want to backup their device data to
+                                                                later restore the data on a different or new device for
+                                                                various reasons.</p>
+                                                            <p>IT may need to protect the data in the corporate set of
+                                                                apps from being backed up so company data cannot be
+                                                                transferred to a new unmanaged device or backup service
+                                                            </p>
+                                                            <p></p>
+                                                        </div>
+                                                        <div class="col-lg-5">
+                                                            <div class="row legend">
+                                                                <div class="col-xs-12 col-sm-6"> <span
+                                                                        translate-text="dc.ws1.technicalApproaches"><strong>TECHNICAL
+                                                                            APPROACHES</strong></span> </div>
+                                                                <div class="col-xs-12 col-sm-6"> <span
+                                                                        class="supported-color"
+                                                                        translate-text="dc.ws1.Supported"><i
+                                                                            class="fa fa-circle"></i> Supported</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <hr />
+                                                            </div>
+                                                            <div class="row recommended-and-supported">
+                                                                <div class="col-xs-6"> <span><strong
+                                                                            class="truncate">AppConfig.org</strong></span>
+                                                                </div>
+                                                                <div class="col-xs-6"> <span class="fa-stack"> <i
+                                                                            class="fa fa-circle fa-stack-2x supported-color"></i>
+                                                                        <i
+                                                                            class="fa fa-apple fa-stack-1x fa-inverse"></i>
+                                                                    </span> <span class="fa-stack"> <i
+                                                                            class="fa fa-circle fa-stack-2x supported-color"></i>
+                                                                        <i
+                                                                            class="fa fa-android fa-stack-1x fa-inverse"></i>
+                                                                    </span> </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="related-core-capabilities">
+                                                    <div class="row entry">
+                                                        <h2 translate-text-dynamic="">Other Security Capabilities</h2>
+                                                        <div class="col-md-6 col-sm-12">
+                                                            <div class="capabilities-entry">
+                                                                <div class="capabilities-icon"> <i
+                                                                        class="fa fa-cog fa-5x" aria-hidden="true"></i>
+                                                                </div>
+                                                                <div class="capabilities-summary">
+                                                                    <h3>Single Sign On Certificate Authentication</h3>
+                                                                    <a href="../Single-Sign-On-Certificate-Authentication"
+                                                                        translate-text="dc.ws1.learnMore"
+                                                                        class=" internal" target="_self"><strong>Learn
+                                                                            More <span class="fa fa-angle-double-right"
+                                                                                aria-hidden="true"></span></strong></a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 col-sm-12">
+                                                            <div class="capabilities-entry">
+                                                                <div class="capabilities-icon"> <i
+                                                                        class="fa fa-cog fa-5x" aria-hidden="true"></i>
+                                                                </div>
+                                                                <div class="capabilities-summary">
+                                                                    <h3>Prevent Copy and Paste</h3> <a
+                                                                        href="../Prevent-Copy-and-Paste"
+                                                                        translate-text="dc.ws1.learnMore"
+                                                                        class=" internal" target="_self"><strong>Learn
+                                                                            More <span class="fa fa-angle-double-right"
+                                                                                aria-hidden="true"></span></strong></a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 col-sm-12">
+                                                            <div class="capabilities-entry">
+                                                                <div class="capabilities-icon"> <i
+                                                                        class="fa fa-cog fa-5x" aria-hidden="true"></i>
+                                                                </div>
+                                                                <div class="capabilities-summary">
+                                                                    <h3>Prevent Screenshot</h3> <a
+                                                                        href="../Prevent-Screenshot"
+                                                                        translate-text="dc.ws1.learnMore"
+                                                                        class=" internal" target="_self"><strong>Learn
+                                                                            More <span class="fa fa-angle-double-right"
+                                                                                aria-hidden="true"></span></strong></a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 col-sm-12">
+                                                            <div class="capabilities-entry">
+                                                                <div class="capabilities-icon"> <i
+                                                                        class="fa fa-cog fa-5x" aria-hidden="true"></i>
+                                                                </div>
+                                                                <div class="capabilities-summary">
+                                                                    <h3>Encryption</h3> <a href="../Encryption"
+                                                                        translate-text="dc.ws1.learnMore"
+                                                                        class=" internal" target="_self"><strong>Learn
+                                                                            More <span class="fa fa-angle-double-right"
+                                                                                aria-hidden="true"></span></strong></a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 col-sm-12">
+                                                            <div class="capabilities-entry">
+                                                                <div class="capabilities-icon"> <i
+                                                                        class="fa fa-cog fa-5x" aria-hidden="true"></i>
+                                                                </div>
+                                                                <div class="capabilities-summary">
+                                                                    <h3>Managed Open In</h3> <a
+                                                                        href="../Managed-Open-In"
+                                                                        translate-text="dc.ws1.learnMore"
+                                                                        class=" internal" target="_self"><strong>Learn
+                                                                            More <span class="fa fa-angle-double-right"
+                                                                                aria-hidden="true"></span></strong></a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 col-sm-12">
+                                                            <div class="capabilities-entry">
+                                                                <div class="capabilities-icon"> <i
+                                                                        class="fa fa-cog fa-5x" aria-hidden="true"></i>
+                                                                </div>
+                                                                <div class="capabilities-summary">
+                                                                    <h3>App Tunneling</h3> <a href="../App-Tunneling"
+                                                                        translate-text="dc.ws1.learnMore"
+                                                                        class=" internal" target="_self"><strong>Learn
+                                                                            More <span class="fa fa-angle-double-right"
+                                                                                aria-hidden="true"></span></strong></a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 col-sm-12">
+                                                            <div class="capabilities-entry">
+                                                                <div class="capabilities-icon"> <i
+                                                                        class="fa fa-cog fa-5x" aria-hidden="true"></i>
+                                                                </div>
+                                                                <div class="capabilities-summary">
+                                                                    <h3>App Configuration</h3> <a
+                                                                        href="../App-Configuration"
+                                                                        translate-text="dc.ws1.learnMore"
+                                                                        class=" internal" target="_self"><strong>Learn
+                                                                            More <span class="fa fa-angle-double-right"
+                                                                                aria-hidden="true"></span></strong></a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 col-sm-12">
+                                                            <div class="capabilities-entry">
+                                                                <div class="capabilities-icon"> <i
+                                                                        class="fa fa-cog fa-5x" aria-hidden="true"></i>
+                                                                </div>
+                                                                <div class="capabilities-summary">
+                                                                    <h3>App Passcode</h3> <a href="../App-Passcode"
+                                                                        translate-text="dc.ws1.learnMore"
+                                                                        class=" internal" target="_self"><strong>Learn
+                                                                            More <span class="fa fa-angle-double-right"
+                                                                                aria-hidden="true"></span></strong></a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="approaches">
+                                                    <div class="container-fluid approach">
+                                                        <h2 translate-text="dc.ws1.supportedApproaches">SUPPORTED
+                                                            APPROACHES</h2>
+                                                        <div class="center-border">
+                                                            <div class="row">
+                                                                <div class="col-md-7 inherit-font">
+                                                                    <h3>AppConfig.org <span
+                                                                            translate-text="dc.ws1.ImplementationSummary">Implementation
+                                                                            Summary</span></h3>
+                                                                    <p></p>
+                                                                    <ul>
+                                                                        <li>Configure an iOS MDM Restriction Profile or
+                                                                            Android for Work restriction profile to
+                                                                            disable backup.</li>
+                                                                        <li>Requires enrollment into MDM.</li>
+                                                                        <li>Requires no coding.</li>
+                                                                        <li>Requires iOS 5+ or Android SAFE 2.0+ or
+                                                                            Android LG 2.2</li>
+                                                                    </ul>
+                                                                    <p></p>
+                                                                </div>
+                                                                <div class="col-md-5"> </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <script
+                                                type="text/javascript">$(document).ready(function () { document.title = "Prevent App Backup"; var a = "Prevent App Backup"; if (a == null || a == "capability") { document.title = "Status 404 - VMware {Code}"; $(".row-fluid").attr("style", "display: none"); $("#main-content").append("<div class='portlet-content'><h2 class='alert alert-info' translate-text='dc.home.SorryProblemRequest'>Sorry, the page you requested was not found.</h2><div><p>Please check the URL for proper spelling and capitalization. If you're having trouble locating a destination on code.vmware.com, try visiting the <a href='/'>VMware {code} home page</a>. Also, try entering a query in the search area or browse the links above.</p></div><code class='lfr-url-error'><a href='<%=themeDisplay.getURLCurrent() %>'><%=themeDisplay.getURLCurrent() %></a></code><div class='separator'></div><a href='javascript:void(0);' onclick='(function(){if (document.referrer) {window.location.replace(document.referrer)} else {javascript:history.go(-1);} return false;})()'><i class='fa fa-angle-double-left' aria-hidden='true'></i> <translate-text key='dc.sx.Back'>Back</translate-text></a></div>") } var b = function () { $(".breadcrumb-item.active").text("Prevent App Backup"); var c = $(".breadcrumb-item").filter(function () { return $(this).text() === " Capability " }); c.next().remove(); c.remove() }; b(); $(".lfr-meta-actions.icons-container").first().remove() });</script>
+                                        </div>
+                                        <div class="entry-links"> </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portlet-boundary portlet-boundary_56_ portlet-static portlet-static-end portlet-borderless portlet-journal-content "
+                                id="p_p_id_56_INSTANCE_DCcKAJpq5acD_"> <span id="p_56_INSTANCE_DCcKAJpq5acD"></span>
+                                <div class="portlet-borderless-container" style="">
+                                    <div class="portlet-body">
+                                        <div class="journal-content-article">
+                                            <div class="container-fluid" id="content-summary">
+                                                <div class="row no-edge-gutter">
+                                                    <div class="col-md-6">
+                                                        <div id="footer-content1"> <span aria-hidden="true"
+                                                                class="fa fa-file-text-o">DE</span>
+                                                            <h2 id="footer-title">Workspace ONE Intelligence Dev Center
+                                                            </h2>
+                                                            <div id="footer-desc"> Monitor, prioritize, troubleshoot,
+                                                                and trend mobile app performance in real time with the
+                                                                Workspace ONE Intelligence analytics platform for
+                                                                Android and iOS devices. </div> <a
+                                                                class="footer-url internal"
+                                                                href="/workspace-one-intelligence"
+                                                                target="_self"><strong>Learn More <span
+                                                                        aria-hidden="true"
+                                                                        class="fa fa-angle-double-right">&nbsp;</span></strong></a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div id="footer-content2"> <span aria-hidden="true"
+                                                                class="fa fa-search">&nbsp;</span>
+                                                            <h2 id="footer-title">Try the Hands-On Lab</h2>
+                                                            <div id="footer-desc"> Test-drive the full technical
+                                                                capabilities of Workspace ONE for free in minutes with
+                                                                no required installations. </div> <a
+                                                                class="footer-url external"
+                                                                href="https://my.vmware.com/en/web/vmware/evalcenter?p=workspace-one-18-hol&amp;src=so_5aa081bce49f6&amp;int_cid=70134000001SpVy"
+                                                                target="_blank" rel="noopener"><strong>Learn More <span
+                                                                        aria-hidden="true"
+                                                                        class="fa fa-angle-double-right">&nbsp;</span></strong></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <style type="text/css">
+                                                #footer-title {
+                                                    color: #fff !important;
+                                                    font-size: 25px !important;
+                                                    overflow: hidden;
+                                                    white-space: nowrap;
+                                                    text-overflow: ellipsis;
+                                                    height: 28px;
+                                                    line-height: 28px;
+                                                    width: 99%
+                                                }
+
+                                                #footer-desc {
+                                                    color: #fff !important;
+                                                    font-size: 18px !important;
+                                                    font-weight: 200;
+                                                    text-align: justify;
+                                                    overflow: hidden;
+                                                    height: 4.4em
+                                                }
+
+                                                .footer-url {
+                                                    color: #fff !important;
+                                                    font-size: 18px !important;
+                                                    margin-top: 10px;
+                                                    display: inline-block
+                                                }
+
+                                                #footer-content1 {
+                                                    padding: 75px;
+                                                    background-color: #00b2e7;
+                                                    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#00B2E7, endColorstr=#007EA3);
+                                                    background-image: -moz-linear-gradient(top, #00b2e7 0, #007ea3 100%);
+                                                    background-image: -webkit-linear-gradient(top, #00b2e7 0, #007ea3 100%);
+                                                    background-image: -ms-linear-gradient(top, #00b2e7 0, #007ea3 100%);
+                                                    background-image: linear-gradient(top, #00b2e7 0, #007ea3 100%);
+                                                    background-image: -o-linear-gradient(top, #00b2e7 0, #007ea3 100%);
+                                                    background-image: -webkit-gradient(linear, right top, right bottom, color-stop(0%, #00b2e7), color-stop(100%, #007ea3))
+                                                }
+
+                                                #footer-content2 {
+                                                    padding: 75px;
+                                                    background-color: #87c435
+                                                }
+
+                                                .content-summary .row {
+                                                    margin: 0 15px
+                                                }
+
+                                                #content-summary #footer-content1 .fa.fa-file-text-o {
+                                                    position: absolute;
+                                                    left: 45px;
+                                                    top: 45px;
+                                                    opacity: .1;
+                                                    font-size: 130px
+                                                }
+
+                                                #content-summary #footer-content2 .fa.fa-search {
+                                                    position: absolute;
+                                                    left: 60px;
+                                                    top: 45px;
+                                                    opacity: .1;
+                                                    font-size: 130px
+                                                }
+
+                                                #content-summary {
+                                                    padding: 20px 0 60px
+                                                }
+
+                                                @media(max-width:980px) {
+                                                    #content-summary .col-md-6 {
+                                                        padding-left: 0;
+                                                        padding-right: 0
+                                                    }
+                                                }
+
+                                                @media(max-width:414px) {
+
+                                                    #footer-content1,
+                                                    #footer-content2 {
+                                                        padding-left: 15px;
+                                                        padding-right: 15px
+                                                    }
+
+                                                    #content-summary #footer-content1 .fa.fa-file-text-o {
+                                                        left: 0
+                                                    }
+
+                                                    #content-summary #footer-content2 .fa.fa-search {
+                                                        left: 5px
+                                                    }
+                                                }
+                                            </style>
+                                        </div>
+                                        <div class="entry-links"> </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="portlet-boundary portlet-boundary_1_WAR_kaleodesignerportlet_ portlet-static portlet-static-end kaleo-designer-portlet "
+                id="p_p_id_1_WAR_kaleodesignerportlet_"> <span id="p_1_WAR_kaleodesignerportlet"></span> </div>
+            <form action="#" id="hrefFm" method="post" name="hrefFm"> <span></span> </form>
+        </div>
+        <footer>
+            <div class="gradient-hr"></div>
+            <div class="ph-footer">
+                <div class="footer-container-row ph-footer-row">
+                    <div class="footer-container-col"> <span> <a href="https://www.vmware.com" title="VMware Logo"
+                                target="_blank" class="nav-link external" rel="noopener"> <img alt="VMware Logo"
+                                    width="134" height="20" aria-label="VMware Logo"
+                                    src="/vmware-code-theme/images/VMware-by-Broadcom-Logo_color.svg" /> </a> </span>
+                    </div>
+                    <div class="footer-container-col"> <span class="ph-footer-col1">Company</span>
+                        <div class="footer-link-text ph-footer-col1-row2"> <a
+                                href="https://www.vmware.com/download/eula.html" class="clickable external"
+                                target="_blank" rel="noopener"> End User Terms &amp; Conditions </a> <br /> <a
+                                href="https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/company/vmw-modern-slavery-california-statement-2021.pdf"
+                                class="clickable external" target="_blank" rel="noopener"> California Transparency Act
+                                Statement </a> <br /> <a href="https://www.vmware.com/vmwarestore/"
+                                translate-text="dc.header.Store" class="clickable external" target="_blank"
+                                rel="noopener">Store</a> </div>
+                    </div>
+                    <div class="footer-container-col"> <span class="ph-footer-col1">Support</span>
+                        <div class="footer-link-text ph-footer-col1-row2"> <a href="/support" class="clickable internal"
+                                target="_self" rel="noopener noreferrer">Developer Support Options</a> <br /> <a
+                                href="https://dcpn.my.site.com/login?so=00Di0000000biLz" class="clickable external"
+                                target="_blank" rel="noopener">DC Partner Network</a> <br /> <a
+                                href="https://docs.vmware.com/" class="clickable external" target="_blank"
+                                rel="noopener">Product Documentation</a> <br /> <a
+                                href="https://www.vmware.com/resources/compatibility/search.php"
+                                class="clickable external" target="_blank" rel="noopener">Compatibility Guide</a> <br />
+                            <a class="feedback-trigger clickable">Report an Issue on this Page</a>
+                        </div>
+                    </div>
+                    <div class="footer-container-col ph-placeholder"></div>
+                    <div class="footer-container-col"> <span class="ph-footer-col1">Resources</span>
+                        <div class="footer-link-text ph-footer-col1-row2"> <a href="https://go.techzone.vmware.com/"
+                                class="clickable external" target="_blank" rel="noopener">VMware Tech Zone</a> <br /> <a
+                                href="https://www.vmware.com/training" class="clickable external" target="_blank"
+                                rel="noopener">Training</a> <br /> <a href="https://pathfinder.vmware.com/"
+                                class="clickable external" target="_blank" rel="noopener">Pathfinder</a> <br /> </div>
+                    </div>
+                    <div class="footer-container-col"> <span class="ph-footer-col1">VMware Social</span>
+                        <table class="ph-footer-col4">
+                            <tbody>
+                                <tr>
+                                    <td> <a href="https://twitter.com/VMware" title="Twitter" target="_blank"
+                                            rel="noopener" class="ph-footer-col4-row2 external"> <i
+                                                class="fa fa-twitter"></i> <span class="social-media">Twitter</span>
+                                        </a> </td>
+                                    <td> <a href="https://www.facebook.com/vmware" title="Facebook" target="_blank"
+                                            rel="noopener" class="ph-footer-col4-row2 external"> <i
+                                                class="fa fa-facebook-square"></i> <span
+                                                class="social-media">Facebook</span> </a> </td>
+                                </tr>
+                                <tr>
+                                    <td> <a href="https://www.youtube.com/user/vmwaretv" title="YouTube" target="_blank"
+                                            rel="noopener" class="ph-footer-col4-row2 external"> <i
+                                                class="fa fa-youtube-square"></i> <span
+                                                class="social-media">YouTube</span> </a> </td>
+                                    <td> <a href="https://www.linkedin.com/company/vmware" title="LinkedIn"
+                                            target="_blank" rel="noopener" class="ph-footer-col4-row2 external"> <i
+                                                class="fa fa-linkedin-square"></i> <span
+                                                class="social-media">LinkedIn</span> </a> </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="fb-links">
+                    <hr class="br-black mb-90 line-size" /> <span class="copy fb-links-text">Copyright &copy; 2005-2024
+                        Broadcom. All Rights Reserved. The term “Broadcom” refers to Broadcom Inc. and/or its
+                        subsidiaries.</span> <br /> <a href="https://www.vmware.com/help/legal.html"
+                        title="Terms of Use" target="_blank" rel="noopener" class="fb-links-text external">Terms of
+                        Use</a> <a href="https://www.vmware.com/help/privacy.html" title="Privacy" target="_blank"
+                        rel="noopener" class="fb-links-text external">Privacy</a> <a
+                        href="https://www.vmware.com/help/privacy/california-privacy-rights.html"
+                        title="Your California Privacy Rights" target="_blank" rel="noopener"
+                        class="fb-links-text external">Your California Privacy Rights</a> <a
+                        href="https://www.vmware.com/help/accessibility.html" title="Accessibility" target="_blank"
+                        rel="noopener" name="&amp;lpos=nav_footer : 8&amp;le=event52,event75"
+                        class="fb-links-text external">Accessibility</a> <a
+                        href="https://www.vmware.com/help/trademarks.html" title="Trademarks" target="_blank"
+                        class="fb-links-text external" rel="noopener">Trademarks</a> <a
+                        href=" https://www.vmware.com/help.html" title="Help" target="_blank" rel="noopener noreferrer"
+                        class="fb-links-text">Help</a> <a href="https://www.vmware.com/forms/customer_feedback.html"
+                        title="Feedback" class="fb-links-text clickable external" target="_blank"
+                        rel="noopener">Feedback</a> <a href="https://www.vmware.com/company/contact_sales.html"
+                        title="Contact Sales" target="_blank" rel="noopener" class="fb-links-text external">Contact
+                        Sales</a>
+                </div>
+            </div>
+        </footer>
+        <style>
+            .ph-footer .footer-container-row {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                gap: 1em;
+            }
+
+            .ph-footer .footer-container-col {
+                flex: 0 0 200px;
+                min-width: 200px;
+            }
+
+            .ph-footer {
+                background-color: #ffffff;
+                padding: 43px 26px 9px 3vw;
+            }
+
+            @media (min-width: 895px) {
+                .ph-footer .ph-placeholder {
+                    display: none;
+                }
+            }
+
+            .ph-footer .logo-container a {
+                padding: 0px 0px 0px 12px;
+            }
+
+            .ph-footer .logo-container a img {
+                margin-top: -10px;
+                margin-right: 26px;
+            }
+
+            .ph-footer table {
+                margin-top: 1em;
+                width: 100%;
+                border-spacing: 0px;
+            }
+
+            .ph-footer td {
+                width: 50%;
+            }
+
+            .ph-footer p {
+                font-size: 20px;
+                line-height: 18px;
+                color: #717074;
+                padding: 0px 0px 0px 12px;
+                margin-top: 29px;
+            }
+
+            .ph-footer .fb-links {
+                margin-top: -20px;
+                padding: 24px 0 15px 0px;
+                text-align: center;
+                background-color: white;
+            }
+
+            .ph-footer .fb-links .copy {
+                font-size: 14px;
+            }
+
+            .ph-footer span {
+                padding-right: 0px;
+            }
+
+            .ph-footer .fb-links a {
+                margin-left: 30px;
+                font-size: 14px;
+                padding-right: 20px;
+                color: #565656;
+            }
+
+            .ph-footer .fb-links a:hover {
+                color: #0094d2;
+            }
+
+            .ph-footer .fb-links-text {
+                /* P1 Body Text */
+                text-align: center;
+                font-family: "Metropolis";
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 24px;
+                /* identical to box height, or 171% */
+                /* Text */
+                color: #565656;
+            }
+
+            @media (max-width: 479px) {
+                .ph-footer .fb-links-text {
+                    display: block;
+                    text-align: left;
+                }
+
+                .ph-footer .fb-links a {
+                    margin-left: 0px;
+                }
+            }
+
+            .ph-footer .line-size {
+                /* margin-left: 110px; margin-right: 130px; margin-bottom: 15px; background-color: white; */
+                border-top: 1px solid #CCCCCC;
+            }
+
+            .ph-footer .ph-footer-row {
+                margin-top: -30px;
+                max-width: 1920px;
+            }
+
+            .ph-footer .ph-footer-col1 {
+                font-family: "Metropolis";
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 24px;
+            }
+
+            .ph-footer .ph-footer-col4 {
+                /* Link Text */
+                font-family: "Metropolis";
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 24px;
+                /* identical to box height, or 171% */
+                /* Indigo/Primary/Link/Normal */
+                color: #1d428a;
+            }
+
+            .ph-footer .ph-footer-col1-row2 {
+                margin-top: -100px;
+                /* P1 Body Text */
+                font-family: "Metropolis";
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 24px;
+                /* or 171% */
+                /* Text */
+                color: #565656;
+                overflow-wrap: break-word;
+                word-wrap: break-word;
+                word-break: break-word;
+            }
+
+            .ph-footer .ph-footer-col4-row2 {
+                /* Link Text */
+                font-family: "Metropolis";
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 24px;
+                /* identical to box height, or 171% */
+                /* Indigo/Primary/Link/Normal */
+                color: #1d428a;
+            }
+
+            .ph-footer .footer-link-text {
+                font-family: "Metropolis";
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 24px;
+                /* or 171% */
+                /* Text */
+                color: #565656;
+                overflow-wrap: break-word;
+                word-wrap: break-word;
+                word-break: break-word;
+                margin-top: 10px;
+            }
+
+            .ph-footer .social-media {
+                margin-left: 1em;
+            }
+
+            .gradient-hr {
+                content: "";
+                background: url(/vmware-code-theme/images/nav-marker.png) #5a39a0;
+                background-repeat: no-repeat;
+                height: 8px;
+                width: 100%;
+                display: block;
+                position: relative;
+            }
+
+            .ph-footer a {
+                text-decoration: none;
+            }
+
+            .clickable,
+            .clickable:visited {
+                color: #565656;
+            }
+
+            .clickable:hover {
+                color: #0094d2;
+            }
+
+            .feedback {
+                padding-left: 0.5rem;
+            }
+        </style>
+        <script
+            type="text/javascript">var apiCatogry = decodeURI(location.pathname.replace("/", "")).replaceAll(" ", "").replaceAll(".", "-").replaceAll("/", "-"); $("html.vmware").addClass("feedback-" + apiCatogry); (function (h, g, l, k, j, i) { window[k] = window[k] || {}; window[k]._q = window[k]._q || [];["identify", "page", "track", "metadata", "locale", "theme"].forEach(function (a) { window[k][a] = function () { var b = Array.prototype.slice.call(arguments); b.unshift(a); window[k]._q.push(b) } }); window[k]._url = l; window[k].init = window[k].init || function (c, b, a) { window[k]._clientId = c; window[k]._clientName = b; window[k]._configs = a || {}; j = h.createElement(g); j.async = 1; j.src = l + "?client_id=" + c + "&esp_object=" + k; i = h.getElementsByTagName(g)[0]; i.parentNode.insertBefore(j, i) } })(document, "script", "https://feedback.esp.vmware.com/assets/ipf/esp.js", "esp"); esp.init("esp-prod-133-jxoiz", "VMware Developer"); esp.identify("Guest");</script>
+    </div>
+    <div class="embeddedPortlets" style="display:none">
+        <div class="trackingPortlet">
+            <div class="portlet-boundary portlet-boundary_tracker_WAR_dpportlet_ portlet-static portlet-static-end portlet-borderless tracker-portlet "
+                id="p_p_id_tracker_WAR_dpportlet_"> <span id="p_tracker_WAR_dpportlet"></span>
+                <div class="portlet-borderless-container" style="">
+                    <div class="portlet-body">
+                        <script
+                            type="text/javascript">$(window).load(function () { DP.Tracking.initTrackingPortlet("https://developer.vmware.com/web/workspace-one/core-capabilities/capability?p_p_id=tracker_WAR_dpportlet&p_p_lifecycle=2&p_p_state=normal&p_p_mode=view&p_p_cacheability=cacheLevelPage&_tracker_WAR_dpportlet_name=Prevent-App-Backup") });</script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style type="text/css">
+        #global-alert-msg .cancel {
+            cursor: pointer;
+            color: #fff;
+            float: right;
+            left: 4%;
+            position: relative
+        }
+
+        #global-alert-msg {
+            background-color: #387c2c;
+            color: #fff;
+            border: 1px solid #387c2c;
+            font-size: 18px;
+            padding: 16px 5% !important;
+            top: 0;
+            z-index: 1000 !important;
+            height: 20px;
+            margin-top: 42px
+        }
+
+        #global-alert-msg a {
+            color: #fff;
+            font-weight: bold;
+            margin-left: 50px
+        }
+    </style>
+    <script src="/vmware-code-theme/js/body.js?D8E42E349282E2D0D95E1BA5CC02D888" type="text/javascript"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/video.js/5.10.5/video.min.js" type="text/javascript"></script>
+    <script
+        type="text/javascript">var analyticsLoaded = false; if (isGaEnabled || /Selenium|LoadPass|PhantomJS|Uptime/.test(navigator.userAgent)) { if (_gaq.length) { for (var i = 0; i < _gaq.length; i++) { console.log(_gaq[i]) } } _gaq.push = function () { console.log(arguments) } } else { if (!analyticsLoaded) { if (document.cookie.indexOf("OptanonConsent") > -1 && document.cookie.indexOf("groups=") > -1) { if (decodeURIComponent(document.cookie).indexOf("C0002:1") > -1) { (function () { var d = document.createElement("script"); d.type = "text/javascript"; d.async = true; d.src = "https://www.googletagmanager.com/gtag/js?id=G-LZ5W0Z51BZ"; var b = document.getElementsByTagName("script")[0]; b.parentNode.insertBefore(d, b); var a = document.createElement("script"); a.innerHTML = "window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);} gtag('js', new Date());gtag('config', 'G-LZ5W0Z51BZ');"; var c = document.getElementsByTagName("script")[0]; c.parentNode.insertBefore(a, c.nextSibling) })(); analyticsLoaded = true } } else { waitForConsentCookie() } var waitForConsent; function waitForConsentCookie() { if (document.cookie.indexOf("OptanonConsent") > -1 && document.cookie.indexOf("groups=") > -1) { clearTimeout(waitForConsent); if (decodeURIComponent(document.cookie).indexOf("C0002:1") > -1) { (function () { var d = document.createElement("script"); d.type = "text/javascript"; d.async = true; d.src = "http://www.googletagmanager.com/gtag/js?id=G-LZ5W0Z51BZ"; var b = document.getElementsByTagName("script")[0]; b.parentNode.insertBefore(d, b); var a = document.createElement("script"); a.innerHTML = "window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);} gtag('js', new Date());gtag('config', 'G-LZ5W0Z51BZ');"; var c = document.getElementsByTagName("script")[0]; c.parentNode.insertBefore(a, c.nextSibling) })(); analyticsLoaded = true } } else { waitForConsent = setTimeout(waitForConsentCookie, 250) } } } };</script>
+    <button style="display:none;" id="ot-sdk-btn" class="ot-sdk-show-settings"> Cookie Settings</button>
+    <script
+        src="/notifications-portlet/notifications/js/main.js?browserId=other&amp;minifierType=js&amp;languageId=en_US&amp;b=6210&amp;t=1709179997000"
+        type="text/javascript"></script>
+    <script type="text/javascript">Liferay.Util.addInputFocus();</script>
+    <script
+        type="text/javascript">Liferay.Portlet.onLoad({ canEditTitle: false, columnPos: 0, isStatic: "end", namespacedId: "p_p_id_56_INSTANCE_vBr4ZdiRfzsy_", portletId: "56_INSTANCE_vBr4ZdiRfzsy", refreshURL: "\x2fc\x2fportal\x2frender_portlet\x3fp_l_id\x3d6433654\x26p_p_id\x3d56_INSTANCE_vBr4ZdiRfzsy\x26p_p_lifecycle\x3d0\x26p_t_lifecycle\x3d0\x26p_p_state\x3dnormal\x26p_p_mode\x3dview\x26p_p_col_id\x3dcolumn-1\x26p_p_col_pos\x3d0\x26p_p_col_count\x3d2\x26p_p_isolated\x3d1\x26currentURL\x3d\x252Fweb\x252Fworkspace-one\x252Fcore-capabilities\x252Fcapability\x253Fname\x253DPrevent-App-Backup" }); Liferay.Portlet.onLoad({ canEditTitle: false, columnPos: 1, isStatic: "end", namespacedId: "p_p_id_56_INSTANCE_DCcKAJpq5acD_", portletId: "56_INSTANCE_DCcKAJpq5acD", refreshURL: "\x2fc\x2fportal\x2frender_portlet\x3fp_l_id\x3d6433654\x26p_p_id\x3d56_INSTANCE_DCcKAJpq5acD\x26p_p_lifecycle\x3d0\x26p_t_lifecycle\x3d0\x26p_p_state\x3dnormal\x26p_p_mode\x3dview\x26p_p_col_id\x3dcolumn-1\x26p_p_col_pos\x3d1\x26p_p_col_count\x3d2\x26p_p_isolated\x3d1\x26currentURL\x3d\x252Fweb\x252Fworkspace-one\x252Fcore-capabilities\x252Fcapability\x253Fname\x253DPrevent-App-Backup" }); Liferay.provide(Liferay.Util, "openKaleoDesignerPortlet", function (c) { var b = AUI(); var e = Liferay.PortletURL.createURL("https://developer.vmware.com/web/workspace-one/core-capabilities/capability?p_p_id=2_WAR_kaleodesignerportlet&p_p_lifecycle=0"); e.setParameter("mvcPath", "/designer/edit_kaleo_draft_definition.jsp"); e.setParameter("availableFields", c.availableFields); e.setParameter("availablePropertyModels", c.availablePropertyModels); e.setParameter("ddmStructureId", c.ddmStructureId); e.setParameter("draftVersion", c.draftVersion); e.setParameter("kaleoProcessId", c.kaleoProcessId); e.setParameter("name", c.name); e.setParameter("openerWindowName", c.openerWindowName); e.setParameter("portletResourceNamespace", c.portletResourceNamespace); e.setParameter("propertiesSaveCallback", c.propertiesSaveCallback); e.setParameter("refreshOpenerOnClose", c.refreshOpenerOnClose); e.setParameter("saveCallback", c.saveCallback); e.setParameter("version", c.version); e.setWindowState("pop_up"); c.uri = e.toString(); var d = c.dialog; if (!d) { var f = b.one(Liferay.Util.getOpener()).get("region"); d = { destroyOnHide: true }; c.dialog = d } if (!("align" in d)) { d.align = Liferay.Util.Window.ALIGN_CENTER } var a = c.dialogIframe; if (!a) { a = { closeOnEscape: false }; c.dialogIframe = a } Liferay.Util.openWindow(c) }, ["liferay-portlet-url"]); Liferay.Portlet.onLoad({ canEditTitle: false, columnPos: 0, isStatic: "end", namespacedId: "p_p_id_1_WAR_kaleodesignerportlet_", portletId: "1_WAR_kaleodesignerportlet", refreshURL: "\x2fc\x2fportal\x2frender_portlet\x3fp_l_id\x3d6433654\x26p_p_id\x3d1_WAR_kaleodesignerportlet\x26p_p_lifecycle\x3d0\x26p_t_lifecycle\x3d0\x26p_p_state\x3dnormal\x26p_p_mode\x3dview\x26p_p_col_id\x3dnull\x26p_p_col_pos\x3dnull\x26p_p_col_count\x3dnull\x26p_p_static\x3d1\x26p_p_isolated\x3d1\x26currentURL\x3d\x252Fweb\x252Fworkspace-one\x252Fcore-capabilities\x252Fcapability\x253Fname\x253DPrevent-App-Backup\x26name\x3dPrevent-App-Backup" }); Liferay.Portlet.onLoad({ canEditTitle: false, columnPos: 0, isStatic: "end", namespacedId: "p_p_id_tracker_WAR_dpportlet_", portletId: "tracker_WAR_dpportlet", refreshURL: "\x2fc\x2fportal\x2frender_portlet\x3fp_l_id\x3d6433654\x26p_p_id\x3dtracker_WAR_dpportlet\x26p_p_lifecycle\x3d0\x26p_t_lifecycle\x3d0\x26p_p_state\x3dnormal\x26p_p_mode\x3dview\x26p_p_col_id\x3dnull\x26p_p_col_pos\x3dnull\x26p_p_col_count\x3dnull\x26p_p_static\x3d1\x26p_p_isolated\x3d1\x26currentURL\x3d\x252Fweb\x252Fworkspace-one\x252Fcore-capabilities\x252Fcapability\x253Fname\x253DPrevent-App-Backup\x26name\x3dPrevent-App-Backup" }); AUI().use("aui-base", "liferay-menu", "liferay-notice", "liferay-poller", "liferay-session", function (a) { (function () { Liferay.Util.addInputType(); Liferay.Portlet.ready(function (b, c) { Liferay.Util.addInputType(c) }); if (a.UA.mobile) { Liferay.Util.addInputCancel() } })(); (function () { new Liferay.Menu(); var b = Liferay.Data.notices; for (var c = 1; c < b.length; c++) { new Liferay.Notice(b[c]) } })(); (function () { Liferay.Session = new Liferay.SessionBase({ autoExtend: true, sessionLength: 30, redirectOnExpire: false, redirectUrl: "https\x3a\x2f\x2fdeveloper\x2evmware\x2ecom\x2fweb\x2fdp", warningLength: 1 }) })() });</script>
+    <script
+        src="/vmware-code-theme/js/main.js?browserId=other&amp;minifierType=js&amp;languageId=en_US&amp;b=6210&amp;t=1700661476000"
+        type="text/javascript"></script>
+    <script type="text/javascript"></script>
+    <script
+        type="text/javascript">$(document).ready(function () { $('a[href!="#"]').each(function () { if (!$(this).hasClass("ga-link") && $(this).attr("href") && !$(this).attr("href").startsWith("javascript:")) { $(this).addClass("ga-link") } }) }); $(window).on("load", function () { utag_data.content_system = "Microsite : code" }); var profileUrl = window.location.protocol + "//" + window.location.hostname + (window.location.port ? ":" + window.location.port : "") + "/user/jy_guyun@fujitsu.com"; $("#_145_userAvatar ul > li > a[href*='control_panel/manage']").attr("href", profileUrl).on("click", function () { window.location.href = profileUrl; return false });</script>
+    <!--[if lte IE 9]> <script type="text/javascript">try{document.domain="vmware.com"}catch(e){};</script> <![endif]-->
+    <noscript><img
+            src="https://developer.vmware.com/akam/13/pixel_3aa0e2a6?a=dD00MDU1ODcyNGNkMDEzNDUxMzEzOWIyZTI5OGRjYjdiOTgyZjdlYjgzJmpzPW9mZg=="
+            style="visibility: hidden; position: absolute; left: -999px; top: -999px;" /></noscript>
+    <script type="text/javascript" src="/n7BB0R/kX/pe/Q-m6/qmrIe0X35aqTc/uO9LbSpzkGYOY9/Qk1QICEi/QDR5Y/xseIEU"></script>
+</body>
+
+</html>
